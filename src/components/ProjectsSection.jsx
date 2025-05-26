@@ -5,8 +5,8 @@ const projects = [
     id: 1,
     title: "SaaS Landing Page",
     description: "A beautiful landing page app using React and Tailwind.",
-    image: "/projects/project1.png",
-    tags: ["React", "TailwindCSS", "Supabase"],
+    image: "/projects/projBLS.png",
+    tags: ["Campaign", "360", "Multicultural"],
     demoUrl: "#",
     githubUrl: "#",
   },
@@ -15,8 +15,8 @@ const projects = [
     title: "Orbit Analytics Dashboard",
     description:
       "Interactive analytics dashboard with data visualization and filtering capabilities.",
-    image: "/projects/project2.png",
-    tags: ["TypeScript", "D3.js", "Next.js"],
+    image: "/projects/projKHC.png",
+    tags: ["Digital", "Identity", "Design"],
     demoUrl: "#",
     githubUrl: "#",
   },
@@ -25,12 +25,13 @@ const projects = [
     title: "E-commerce Platform",
     description:
       "Full-featured e-commerce platform with user authentication and payment processing.",
-    image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
+    image: "/projects/projBud.png",
+    tags: ["OOH", "Experiential", "Design"],
     demoUrl: "#",
     githubUrl: "#",
   },
 ];
+
 
 export const ProjectsSection = () => {
   return (
@@ -63,6 +64,7 @@ export const ProjectsSection = () => {
               <div className="p-6">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
+                    // eslint-disable-next-line react/jsx-key
                     <span className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
                       {tag}
                     </span>
@@ -99,10 +101,10 @@ export const ProjectsSection = () => {
         <div className="text-center mt-12">
           <a
             className="cosmic-button w-fit flex items-center mx-auto gap-2"
-            target="_blank"
-            href="https://github.com/machadop1407"
+            target="_self"
+            href="/projects"
           >
-            Check My Github <ArrowRight size={16} />
+            View My Work <ArrowRight size={16} />
           </a>
         </div>
       </div>

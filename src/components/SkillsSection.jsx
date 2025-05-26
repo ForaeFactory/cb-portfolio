@@ -2,32 +2,40 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 const skills = [
-  // Frontend
-  { name: "HTML/CSS", level: 95, category: "frontend" },
-  { name: "JavaScript", level: 90, category: "frontend" },
-  { name: "React", level: 90, category: "frontend" },
-  { name: "TypeScript", level: 85, category: "frontend" },
-  { name: "Tailwind CSS", level: 90, category: "frontend" },
-  { name: "Next.js", level: 80, category: "frontend" },
+  // Vision
+  { name: "Campaign Direction", level: 90, category: "vision" },
+  { name: "Multichannel Strategy", level: 80, category: "vision" },
+  { name: "Storytelling", level: 95, category: "vision" },
+  { name: "Brand Positioning", level: 85, category: "vision" },
+  { name: "Concept Development", level: 90, category: "vision" },
 
-  // Backend
-  { name: "Node.js", level: 80, category: "backend" },
-  { name: "Express", level: 75, category: "backend" },
-  { name: "MongoDB", level: 70, category: "backend" },
-  { name: "PostgreSQL", level: 65, category: "backend" },
-  { name: "GraphQL", level: 60, category: "backend" },
+  // Execution
+  { name: "UX/UI Principles", level: 85, category: "execution" },
+  { name: "Branding", level: 90, category: "execution" },
+  { name: "Responsive Design", level: 80, category: "execution" },
+  { name: "Front End Development", level: 65, category: "execution" },
+  { name: "Digital & Print", level: 85, category: "execution" },
+  { name: "Experiential", level: 70, category: "execution" },
+
+  // Leadership
+  { name: "Collaboration", level: 90, category: "leadership" },
+  { name: "Stakeholder Presentations", level: 85, category: "leadership" },
+  { name: "Project Management", level: 85, category: "leadership" },
+  { name: "Team-Building", level: 90, category: "leadership" },
 
   // Tools
-  { name: "Git/GitHub", level: 90, category: "tools" },
-  { name: "Docker", level: 70, category: "tools" },
-  { name: "Figma", level: 85, category: "tools" },
-  { name: "VS Code", level: 95, category: "tools" },
+  { name: "Adobe Creative Suite", level: 95, category: "tools" },
+  { name: "Figma", level: 80, category: "tools" },
+  { name: "Asana", level: 90, category: "tools" },
+  { name: "HTML/CSS", level: 80, category: "tools" },
+  { name: "JavaScript", level: 75, category: "tools" },
+  { name: "React", level: 70, category: "tools" },
 ];
 
-const categories = ["all", "frontend", "backend", "tools"];
+const categories = ["all", "vision", "execution", "leadership", "tools"];
 
 export const SkillsSection = () => {
-  const [activeCategory, setActiveCategory] = useState("all");
+  const [activeCategory, setActiveCategory] = useState("vision");
 
   const filteredSkills = skills.filter(
     (skill) => activeCategory === "all" || skill.category === activeCategory
