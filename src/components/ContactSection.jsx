@@ -30,7 +30,7 @@ export const ContactSection = () => {
     <section id="contact" className="py-15 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          Let's <span className="text-primary"> Connect</span>
+          Let&apos;s <span className="text-primary"> Connect</span>
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
