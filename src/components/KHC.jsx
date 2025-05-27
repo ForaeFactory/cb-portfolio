@@ -1,16 +1,19 @@
 import { ArrowDown } from "lucide-react";
-import KH from '/public/projects/KH/KH_Cover.png';
-import KH_Overview from '/public/projects/KH/KH_Overview.png';
-import KH_Profile from '/public/projects/KH/KH_Profile.png';
-import KH_Situation from '/public/projects/KH/KH_Situation.png';
-import KH_Research from '/public/projects/KH/KH_Research.png';
-import KH_Research2 from '/public/projects/KH/KH_Research2.png';
-import KH_Approach1 from '/public/projects/KH/KH_Approach.png';
-import KH_Approach2 from '/public/projects/KH/KH_Approach1.png';
-import KH_Approach3 from '/public/projects/KH/KH_Approach2.png';
-import KH_Results1 from '/public/projects/KH/KH_Results1.png';
-import KH_Results2 from '/public/projects/KH/KH_Results2.png';
-import KH_Results3 from '/public/projects/KH/KH_Results3.png';
+import KH from '/projects/KH/KH_Cover.png';
+import KH_Overview from '/projects/KH/KH_Overview.png';
+import KH_Profile from '/projects/KH/KH_Profile.png';
+import KH_Situation from '/projects/KH/KH_Situation.png';
+import KH_Research from '/projects/KH/KH_Research.png';
+import KH_Research2 from '/projects/KH/KH_Research2.png';
+import KH_Approach1 from '/projects/KH/KH_Approach.png';
+import KH_Approach2 from '/projects/KH/KH_Approach1.png';
+import KH_Approach3 from '/projects/KH/KH_Approach2.png';
+import KH_Results1 from '/projects/KH/KH_Result1.png';
+import KH_Results2 from '/projects/KH/KH_Result2.png';
+import KH_Results3 from '/projects/KH/KH_Result3.png';
+import { ProjectFeature } from "./ProjectFeature";
+import { Navbar } from "./Navbar";
+import { Footer } from "./Footer";
 
 const casePages = [
     {
@@ -71,9 +74,10 @@ const casePages = [
 ];
 
 
-export const KHWork = () => {
+export const KHCProject = () => {
     return (
         <>
+            <Navbar />
             <section
                 id="hero"
                 className="relative min-h-screen flex flex-col items-center justify-center px-4"
@@ -96,10 +100,10 @@ export const KHWork = () => {
                                 <img
                                     src={project.image}
                                     alt={project.title}
-                                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-101"
                                 />
                             </div>
-                        </div>))};
+                        </div>))}
                 </div>
 
                 <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
@@ -107,6 +111,8 @@ export const KHWork = () => {
                     <ArrowDown className="h-5 w-5 text-primary" />
                 </div>
             </section>
+            <ProjectFeature brand={'khc'} />
+            <Footer />
         </>
     );
 };

@@ -1,6 +1,6 @@
 import { Navbar } from "../components/Navbar";
-import { MULWork } from "../components/MUL";
 import { Footer } from "../components/Footer";
+import { MULProject } from "../components/MUL";
 
 
 export const Projects = () => {
@@ -15,7 +15,7 @@ export const Projects = () => {
             <Navbar />
             {/* Main Content */}
             <main>
-                <MULWork />
+                <MULProject />
             </main>
 
             {/* Footer */}

@@ -6,8 +6,8 @@ const navItems = [
   { name: "Home", href: "/" },
   { name: "About", href: "/#about" },
   { name: "Skills", href: "/#skills" },
-  { name: "Projects", href: "/projects" },
-  { name: "Contact", href: "#contact" },
+  { name: "Projects", href: "#projects" },
+  { name: "Contact", href: "/#contact" },
 ];
 
 export const Navbar = () => {
@@ -32,7 +32,7 @@ export const Navbar = () => {
       <div className="container flex items-center justify-around">
         <a
           className="text-xl font-bold text-primary flex items-center"
-          href="#hero"
+          href="/"
         >
           <span className="relative z-10">
             <span className="text-glow text-foreground"> CB Design </span>{" "}
