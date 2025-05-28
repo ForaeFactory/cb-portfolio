@@ -81,7 +81,7 @@ export const BUDProject = () => {
                         id="hero"
                         className="relative min-h-screen flex flex-col items-center justify-center px-4"
                     >
-                        <div className="container max-w-7xl mx-auto text-center z-10">
+                        <div className="container max-w-screen mx-auto text-center z-10">
                             <img
                                 src={BUD}
                                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
@@ -93,7 +93,7 @@ export const BUDProject = () => {
                             {casePages.map((project, key) => (
                                 <div
                                     key={key}
-                                    className="container max-w-7xl my-30 mx-auto text-center z-10"
+                                    className="container max-w-screen my-30 mx-auto text-center z-10"
                                 >
                                     <div className="h-auto m-10 overflow-hidden rounded-xl">
                                         <img
