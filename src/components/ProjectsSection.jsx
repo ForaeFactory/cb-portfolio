@@ -7,7 +7,7 @@ import Bud from '/projects/Bud_Landscape.png';
 const projects = [
   {
     id: 1,
-    title: "Find Your Flavor",
+    title: "Bring Your Flavor",
     description: "Campaign launch of Bud Light's Seltzer Extension",
     image: BLS,
     tags: ["Campaign", "360", "Multicultural"],
