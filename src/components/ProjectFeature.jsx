@@ -8,7 +8,7 @@ const projects = [
     {
         id: 1,
         brand: "bls",
-        title: "Find Your Flavor",
+        title: "Bring Your Flavor",
         description: "Campaign launch of Bud Light's Seltzer Extension",
         image: BLS,
         tags: ["Campaign", "360", "Multicultural"],
