@@ -8,7 +8,7 @@ const projects = [
   {
     id: 1,
     title: "Find Your Flavor",
-    description: "Interactive analytics dashboard with data visualization and filtering capabilities.",
+    description: "Campaign launch of Bud Light's Seltzer Extension",
     image: BLS,
     tags: ["Campaign", "360", "Multicultural"],
     demoUrl: "/projects/bls-flavor",
@@ -17,7 +17,7 @@ const projects = [
     id: 2,
     title: "Digital Revolution",
     description:
-      "Interactive analytics dashboard with data visualization and filtering capabilities.",
+      "Design digital product suite as part of KHC's digital revolution.",
     image: KHC,
     tags: ["Digital", "Identity", "Design"],
     demoUrl: "/projects/khc-digital",
@@ -26,7 +26,7 @@ const projects = [
     id: 3,
     title: "Be A King",
     description:
-      "Full-featured e-commerce platform with user authentication and payment processing.",
+      "Regional launch of multicultural Be A King campaign.",
     image: Bud,
     tags: ["OOH", "Experiential", "Design"],
     demoUrl: "/projects/bud-king",
@@ -35,7 +35,7 @@ const projects = [
     id: 4,
     title: "Look of the Leader",
     description:
-      "Full-featured e-commerce platform with user authentication and payment processing.",
+      "Enhance the premium aesthetic of Michelob Ultra for trade.",
     image: MUL2,
     tags: ["OOH", "Experiential", "Design"],
     demoUrl: "/projects/mul-leader",
