@@ -14,15 +14,15 @@ export const HeroSection = () => {
               {" "}
               Craig
             </span>
-            <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2">
+            <span className="text-gradient opacity-0 animate-fade-in-delay-2">
               {" "}
               Brooks
             </span>
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            A strategic thinker and hands-on creator with a passion for design, storytelling, and problem solving.
-            From shaping global brands to building experiences, I have been lucky to collaborate with high-performing teams
+            A strategic thinker and hands-on creator with a passion for design, storytelling, and data-driven problem solving.
+            From shaping global brands to building C-Suite executive decks, I have been lucky to collaborate with high-performing teams
             to deliver work that connects, performs, and lasts.
           </p>
 

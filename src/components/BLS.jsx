@@ -71,7 +71,7 @@ const casePages = [
 export const BLSProject = () => {
     return (
         <>
-            <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+            <div className="min-h-screen bg-background2 text-foreground overflow-x-hidden">
                 {/* Navbar */}
                 <Navbar />
                 {/* Main Content */}
@@ -92,9 +92,9 @@ export const BLSProject = () => {
                             {casePages.map((project, key) => (
                                 <div
                                     key={key}
-                                    className="container max-w-screen my-30 mx-auto text-center z-10"
+                                    className="container max-w-screen my-30 text-center z-10"
                                 >
-                                    <div className="h-auto m-10 overflow-hidden rounded-xl">
+                                    <div className="h-auto overflow-hidden rounded-lg">
                                         <img
                                             src={project.image}
                                             alt={project.title}

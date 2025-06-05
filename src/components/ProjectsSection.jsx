@@ -11,15 +11,15 @@ const projects = [
     description: "Campaign launch of Bud Light's Seltzer Extension",
     image: BLS,
     tags: ["Campaign", "360", "Multicultural"],
-    demoUrl: "/projects/bls-flavor",
+    demoUrl: "/projects/blseltzer",
   },
   {
     id: 2,
     title: "Digital Revolution",
     description:
-      "Design digital product suite as part of KHC's digital revolution.",
+      "Digital product suite as part of KHC's digital revolution.",
     image: KHC,
-    tags: ["Digital", "Identity", "Design"],
+    tags: ["Digital", "Identity", "Figma"],
     demoUrl: "/projects/khc-digital",
   },
   {
@@ -35,10 +35,10 @@ const projects = [
     id: 4,
     title: "Look of the Leader",
     description:
-      "Enhance the premium aesthetic of Michelob Ultra for trade.",
+      "Enhance the premium aesthetic of Michelob Ultra.",
     image: MUL2,
-    tags: ["OOH", "Experiential", "Design"],
-    demoUrl: "/projects/mul-leader",
+    tags: ["OOH", "Experiential", "Trade",],
+    demoUrl: "/projects/ultra",
   },
 ];
 
@@ -49,7 +49,7 @@ export const ProjectsSection = () => {
       <div className="container mx-auto max-w-4xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
           {" "}
-          Featured <span className="text-primary"> Projects </span>
+          Projects & <span className="text-primary"> Case Studies </span>
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">

@@ -3,6 +3,7 @@
 @theme {
   --color-border: hsl(var(--border));
   --color-background: hsl(var(--background));
+  --color-background2: hsl(var(--background2));
   --color-foreground: hsl(var(--foreground));
 
   --color-primary: hsl(var(--primary));
@@ -66,6 +67,7 @@
   :root {
     --background: 210 40% 98%;
     --foreground: 222 47% 11%;
+    --background2: 0 100% 100%;
 
     --card: 0 0% 100%;
 

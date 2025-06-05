@@ -3,8 +3,8 @@ import { ArrowDown } from "lucide-react";
 import { Navbar } from "./Navbar";
 import { Footer } from "./Footer";
 import { ProjectFeature } from "./ProjectFeature";
-import BUD from '/projects/BUD/Bud_Cover.png';
-import BUD_Overview from '/projects/BUD/Bud_Case-Overview.png';
+import BUD from '/projects/BUD/Bud_Case-Cover.png';
+import BUD_Overview from '/projects/BUD/Bud_Case-Overview2.png';
 import BUD_Profile from '/projects/BUD/Bud_Case-Profile.png';
 import BUD_Situation from '/projects/BUD/Bud_Case-Situation.png';
 import BUD_Research from '/projects/BUD/Bud_Case-Research.png';
@@ -12,7 +12,7 @@ import BUD_Approach1 from '/projects/BUD/Bud_Case-Approach1.png';
 import BUD_Approach2 from '/projects/BUD/Bud_Case-Approach2.png';
 import BUD_Approach3 from '/projects/BUD/Bud_Case-Approach3.png';
 import BUD_Results1 from '/projects/BUD/Bud_Case-Results1.png';
-import BUD_Results2 from '/projects/BUD/Bud_Case-Results2.png';
+import BUD_Results2 from '/projects/BUD/Bud_Case-Results3.png';
 import BUD_Close from '/projects/BUD/Bud_Case-Close.png';
 
 const casePages = [

@@ -78,7 +78,7 @@ export const MULProject = () => {
                 <main>
                     <section
                         id="hero"
-                        className="relative min-h-screen flex flex-col items-center justify-center px-4"
+                        className="relative min-h-screen flex flex-col items-center justify-center"
                     >
                         <div className="container max-w-screen mx-auto text-center z-10">
                             <img
@@ -92,9 +92,9 @@ export const MULProject = () => {
                             {casePages.map((project, key) => (
                                 <div
                                     key={key}
-                                    className="container max-w-screen my-30 mx-auto text-center z-10"
+                                    className="container max-w-screen my-20 mx-auto text-center z-10"
                                 >
-                                    <div className="h-auto m-10 overflow-hidden rounded-xl">
+                                    <div className="h-auto overflow-hidden rounded-xl">
                                         <img
                                             src={project.image}
                                             alt={project.title}

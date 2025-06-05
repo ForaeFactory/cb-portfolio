@@ -1,5 +1,5 @@
 import { ArrowDown } from "lucide-react";
-import KH from '/projects/KH/KH_Cover.png';
+import KH from '/projects/KH/KH_CoverUD.png';
 import KH_Overview from '/projects/KH/KH_Overview.png';
 import KH_Profile from '/projects/KH/KH_Profile.png';
 import KH_Situation from '/projects/KH/KH_Situation.png';
@@ -11,6 +11,7 @@ import KH_Approach3 from '/projects/KH/KH_Approach2.png';
 import KH_Results1 from '/projects/KH/KH_Result1.png';
 import KH_Results2 from '/projects/KH/KH_Result2.png';
 import KH_Results3 from '/projects/KH/KH_Result3.png';
+import KH_Close from '/projects/KH/KH_CaseClose.png';
 import { ProjectFeature } from "./ProjectFeature";
 import { Navbar } from "./Navbar";
 import { Footer } from "./Footer";
@@ -71,6 +72,11 @@ const casePages = [
         description: "Results: Meet the Jetsons",
         image: KH_Results3
     },
+    {
+        id: 12,
+        description: "KH Insights Suite",
+        image: KH_Close
+    },
 ];
 
 
@@ -96,7 +102,7 @@ export const KHCProject = () => {
                             key={key}
                             className="container max-w-screen my-30 mx-auto text-center z-10"
                         >
-                            <div className="h-auto m-10 overflow-hidden rounded-xl">
+                            <div className="h-auto overflow-hidden rounded-lg">
                                 <img
                                     src={project.image}
                                     alt={project.title}

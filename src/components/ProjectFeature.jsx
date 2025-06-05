@@ -12,14 +12,14 @@ const projects = [
         description: "Campaign launch of Bud Light's Seltzer Extension",
         image: BLS,
         tags: ["Campaign", "360", "Multicultural"],
-        demoUrl: "/projects/bls-flavor",
+        demoUrl: "/projects/blseltzer",
     },
     {
         id: 2,
         brand: "khc",
         title: "Digital Revolution",
         description:
-            "Design digital product suite as part of KHC's digital revolution.",
+            "Digital product suite as part of KHC's digital revolution.",
         image: KHC,
         tags: ["Digital", "Identity", "Design"],
         demoUrl: "/projects/khc-digital",
@@ -42,7 +42,7 @@ const projects = [
             "Enhance the premium aesthetic of Michelob Ultra for trade.",
         image: MUL2,
         tags: ["OOH", "Trade", "Design"],
-        demoUrl: "/projects/mul-leader"
+        demoUrl: "/projects/ultra"
     },
 ];
 
@@ -58,9 +58,9 @@ export const ProjectFeature = (brand) => {
         <section id="projects" className="py-24 px-4 relative">
 
             <div className="container mx-auto max-w-5xl">
-                <h2 className="py-10 text-3xl md:text-4xl font-bold mb-4 text-center">
+                <h2 className="pt-10 pb-15 text-3xl md:text-4xl font-bold mb-4 text-center">
                     {" "}
-                    Featured <span className="text-primary"> Projects </span>
+                    Other Projects & <span className="text-primary"> Case Studies </span>
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

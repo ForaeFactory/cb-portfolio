@@ -12,29 +12,33 @@ export const AboutSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold">
-              Visionary Creative & Passionate Leader
+              Visionary Creative & Life-Long Learner
             </h3>
 
             <p className="text-muted-foreground">
-              Over the past 15 years, I’ve helped brands shape their voice,
-              and bring ideas to life across screens, spaces, and experiences.
-              From public speaking to leading creative for national campaigns,
-              I’ve worn many hats—that flexibility has made me a empathetic
-              collaborator and leader.
+              Over the past 15 years, I’ve helped global brands, scrappy startups,
+              and private equity-backed companies craft bold identities and impactful
+              campaigns. From launching national advertising for iconic names like Bud Light
+              and Kraft Heinz to mentoring emerging talent and building my own agency,
+              I’ve worn many hats—all in pursuit of creative ideas and meaningful results.
             </p>
 
             <p className="text-muted-foreground">
-              I specialize in brand strategy, storytelling and creative leadership.
-              I’m a self-taught designer who learned by doing—by
-              saying yes to challenges, overcoming obstacles and adapting to
+              My journey began in an unexpected place—accounting—but my curiosity,
+              hustle, and creative instinct led me to carve out a path in design,
+              marketing, and entrepreneurship. I’m a self-taught designer who learned
+              by doing—by saying yes to challenges, overcoming obstacles and adapting to
               an ever-changing landscape. This path built more than
               technical skill; it built creative resilience, critical thinking,
               and a deep understanding of how to turn ideas into results.
             </p>
 
             <p className="text-muted-foreground">
-              Whether you need someone who can zoom out and analyze the big picture
-              or dive in and get their hands dirty, I’m excited and equipped to do both—with skill, clarity, and passion.
+              Whether I’m developing a brand from the ground up, consulting on
+              high-stakes creative strategy, or storytelling through music and film,
+              I bring vision, empathy, and a deep respect for craft. I believe
+              good design is more than aesthetic—it’s strategic, emotional, and transformative.
+              At the end of it all...I just want to build something that lasts.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
