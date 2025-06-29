@@ -1,4 +1,15 @@
-# Build a Modern Portfolio Website with React & TailwindCSS
+<p align="center">
+  <img src="/public/favicon.svg" width="50" alt="Logo" />
+</p>
+<h1 align="center">Personal portfolio</h1>
+
+[![Site preview](/public/site-preview.png)]
+
+My design portfolio to showcase a few projects.
+
+
+
+<!-- # Build a Modern Portfolio Website with React & TailwindCSS
 
 <div align="center">
   <br />
@@ -130,4 +141,4 @@ Your live website will be hosted on a custom subdomain (e.g. `https://your-name.
 
 ---
 
-Let me know if you'd like me to generate a version with your actual GitHub repo, YouTube URL, or a banner image suggestion!
+Let me know if you'd like me to generate a version with your actual GitHub repo, YouTube URL, or a banner image suggestion! -->
