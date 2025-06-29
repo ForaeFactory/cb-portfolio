@@ -1,44 +1,35 @@
 import { SignpostBig, BookOpen, Puzzle } from "lucide-react";
+import craigPic from '../assets/profileImageL.png'
 
 export const AboutSection = () => {
   return (
     <section id="about" className="py-24 px-4 relative">
       {" "}
       <div className="container mx-auto max-w-6xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-          About <span className="text-primary"> Me</span>
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center tracking-wide">
+          In a Nutshell...
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <h3 className="text-2xl font-semibold">
-              Visionary Creative & Life-Long Learner
+            <h3 className="text-2xl text-left font-semibold">
+              The Road Less Traveled
             </h3>
 
-            <p className="text-muted-foreground">
-              Over the past 15 years, I’ve helped global brands, scrappy startups,
-              and private equity-backed companies craft bold identities and impactful
-              campaigns. From launching national advertising for iconic names like Bud Light
-              and Kraft Heinz to mentoring emerging talent and building my own agency,
-              I’ve worn many hats—all in pursuit of creative ideas and meaningful results.
+            <p className="text-left text-lg text-muted-foreground">
+              For 15 years, I've been the creative force behind bold identities and impactful campaigns
+              for everyone from global giants like Bud Light and Kraft Heinz to agile startups and private equity-backed ventures.
+              My journey from accounting to launching national ad campaigns and building my own agency has been anything but linear.
+              Every step has been driven by a relentless pursuit of meaningful results and creative innovation.
             </p>
 
-            <p className="text-muted-foreground">
-              My journey began in an unexpected place—accounting—but my curiosity,
-              hustle, and creative instinct led me to carve out a path in design,
-              marketing, and entrepreneurship. I’m a self-taught designer who learned
-              by doing—by saying yes to challenges, overcoming obstacles and adapting to
-              an ever-changing landscape. This path built more than
-              technical skill; it built creative resilience, critical thinking,
-              and a deep understanding of how to turn ideas into results.
-            </p>
-
-            <p className="text-muted-foreground">
-              Whether I’m developing a brand from the ground up, consulting on
-              high-stakes creative strategy, or storytelling through music and film,
-              I bring vision, empathy, and a deep respect for craft. I believe
-              good design is more than aesthetic—it’s strategic, emotional, and transformative.
-              At the end of it all...I just want to build something that lasts.
+            <p className="text-left text-lg text-muted-foreground">
+              I'm a firm believer in learning by doing. My self-taught path in design, marketing, and entrepreneurship
+              wasn't just about acquiring technical skills; it forged a creative resilience and a knack for turning big
+              ideas into tangible outcomes. Whether I'm crafting a brand from scratch, advising on high-stakes creative
+              strategy, or storytelling through film and music, I bring a unique blend of <b>vision, empathy, and an unwavering
+                commitment to craft.</b> For me, great design is more than just aesthetics—it's strategic, intentional, and
+              transformative. Ultimately, I'm here to build things that endure.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
@@ -56,47 +47,8 @@ export const AboutSection = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-12">
-            <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Puzzle className="h-6 w-6 text-primary" />
-                </div>
-                <div className="text-left">
-                  <h4 className="font-semibold text-lg"> Brand Strategy</h4>
-                  <p className="text-muted-foreground">
-                    Craft clear, compelling brand strategies that align business goals with cultural relevance and audience insight.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <BookOpen className="h-6 w-6 text-primary" />
-                </div>
-                <div className="text-left">
-                  <h4 className="font-semibold text-lg">Storytelling</h4>
-                  <p className="text-muted-foreground">
-                    Transform ideas into impactful stories that connect with audiences, elevate brands, and drive engagement across platforms.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <SignpostBig className="h-6 w-6 text-primary" />
-                </div>
-
-                <div className="text-left">
-                  <h4 className="font-semibold text-lg">Creative Leadership</h4>
-                  <p className="text-muted-foreground">
-                    Lead with vision and empathy to inspire teams, elevate ideas, and deliver bold, effective creative work.
-                  </p>
-                </div>
-              </div>
-            </div>
+          <div className="grid grid-cols-1 p-10">
+            <img src={craigPic} className="rounded-2xl" alt='Me looking up like a goofball!' />
           </div>
         </div>
       </div>

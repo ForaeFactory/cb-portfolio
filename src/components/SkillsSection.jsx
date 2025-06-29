@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { Section } from "./Section";
 
 const skills = [
   // Vision
@@ -34,29 +35,49 @@ const skills = [
 
 const categories = ["all", "vision", "execution", "leadership", "tools"];
 
-export const SkillsSection = () => {
+export const SkillsSection = ({ id, visible, sectionRef }) => {
   const [activeCategory, setActiveCategory] = useState("vision");
+  const [animateKey, setAnimateKey] = useState(0);
+  const [focused, setFocused] = useState(false);
+  const titleId = `${id}-title`;
+
 
   const filteredSkills = skills.filter(
     (skill) => activeCategory === "all" || skill.category === activeCategory
   );
+
+  const filterChange = (newFilter) => {
+    setActiveCategory(newFilter)
+    setAnimateKey(prevKey => prevKey + 1)
+  }
+
   return (
-    <section id="skills" className="py-24 px-4 relative bg-secondary/30">
+    <Section
+      className="profile"
+      onFocus={() => setFocused(true)}
+      onBlur={() => setFocused(false)}
+      as="section"
+      id={id}
+      ref={sectionRef}
+      aria-labelledby={titleId}
+      tabIndex={-1}>
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-          My <span className="text-primary"> Skills</span>
+          Toolbox
         </h2>
+        <hr
+          className="my-10 h-px border-t-0 bg-transparent bg-linear-to-r from-white/0 via-white/30 to-transparent" />
 
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-4 my-12">
           {categories.map((category, key) => (
             <button
               key={key}
-              onClick={() => setActiveCategory(category)}
+              onClick={() => filterChange(category)}
               className={cn(
-                "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
+                "px-5 py-2 rounded-md text-lg font-regular transition-colors duration-300 capitalize",
                 activeCategory === category
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-secondary/70 text-forefround hover:bd-secondary"
+                  ? "bg-primary font-medium text-black"
+                  : "bg-secondary text-forefround hover:bd-secondary"
               )}
             >
               {category}
@@ -64,18 +85,18 @@ export const SkillsSection = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 transition-all duration-300 ease-in">
           {filteredSkills.map((skill, key) => (
             <div
               key={key}
-              className="bg-card p-6 rounded-lg shadow-xs card-hover"
+              className="bg-card/30 p-6 rounded-md shadow-xs card-hover"
             >
               <div className="text-left mb-4">
-                <h3 className="font-semibold text-lg"> {skill.name}</h3>
+                <h3 className="font-semibold text-md"> {skill.name}</h3>
               </div>
-              <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
-                <div
-                  className="bg-primary h-2 rounded-full origin-left animate-[grow_1.5s_ease-out]"
+              <div className="w-full bg-primary/30 h-2 rounded-full overflow-hidden">
+                <div key={animateKey}
+                  className='bg-primary/80 h-2 rounded-full origin-left animate-grow'
                   style={{ width: skill.level + "%" }}
                 />
               </div>
@@ -89,6 +110,6 @@ export const SkillsSection = () => {
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   );
 };

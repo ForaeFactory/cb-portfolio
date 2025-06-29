@@ -1,13 +1,14 @@
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { Monogram } from "./Monogram";
 
 const navItems = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/#about" },
-  { name: "Skills", href: "/#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Contact", href: "/#contact" },
+  { name: "Home", href: "/", side: "left" },
+  { name: "Snapshot", href: "/#about", side: "left" },
+  { name: "Toolbox", href: "/#skills" },
+  { name: "Projects", href: "#projects", side: "right" },
+  { name: "Connect", href: "/#contact", side: "right" },
 ];
 
 export const Navbar = () => {
@@ -29,29 +30,39 @@ export const Navbar = () => {
         isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
       )}
     >
-      <div className="container flex items-center justify-around">
+
+
+      {/* desktop nav */}
+      <div className="hidden md:flex justify-around">
+        {navItems.map((item, key) => (
+          item.side === 'left' &&
+          <a
+            key={key}
+            href={item.href}
+            className="text-foreground text-lg font-medium hover:text-primary transition-colors duration-300"
+          >
+            {item.name}
+          </a>
+        ))}
         <a
-          className="text-xl font-bold text-primary flex items-center"
+          className="text-primary flex items-center"
           href="/"
         >
           <span className="relative z-10">
-            <span className="text-glow text-foreground"> CB Design </span>{" "}
-            Portfolio
+            <Monogram />
           </span>
         </a>
+        {navItems.map((item, key) => (
+          item.side === 'right' &&
+          <a
+            key={key}
+            href={item.href}
+            className="text-foreground text-lg font-medium hover:text-primary transition-colors duration-300"
+          >
+            {item.name}
+          </a>
+        ))}
 
-        {/* desktop nav */}
-        <div className="hidden md:flex space-x-8">
-          {navItems.map((item, key) => (
-            <a
-              key={key}
-              href={item.href}
-              className="text-foreground/80 hover:text-primary transition-colors duration-300"
-            >
-              {item.name}
-            </a>
-          ))}
-        </div>
 
         {/* mobile nav */}
 

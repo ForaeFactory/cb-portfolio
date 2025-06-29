@@ -2,6 +2,8 @@ import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
+
+
 export const ThemeToggle = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -37,9 +39,9 @@ export const ThemeToggle = () => {
       )}
     >
       {isDarkMode ? (
-        <Sun className="h-6 w-6 text-yellow-300" />
+        <Sun className="mr-10 h-8 w-8 color-primary" />
       ) : (
-        <Moon className="h-6 w-6 text-blue-900" />
+        <Moon className="mr-10 h-8 w-8 color-foreground" />
       )}
     </button>
   );

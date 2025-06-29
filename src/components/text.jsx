@@ -1,0 +1,26 @@
+/* eslint-disable react/prop-types */
+import { classes } from '../lib/utils';
+
+export const Text = ({
+    children,
+    size = 'm',
+    as: Component = 'span',
+    align = 'auto',
+    weight = 'auto',
+    secondary,
+    className,
+    ...rest
+}) => {
+    return (
+        <Component
+            className={classes('text', className)}
+            data-align={align}
+            data-size={size}
+            data-weight={weight}
+            data-secondary={secondary}
+            {...rest}
+        >
+            {children}
+        </Component>
+    );
+};

@@ -27,33 +27,34 @@ export const ContactSection = () => {
     }, 1500);
   };
   return (
-    <section id="contact" className="py-15 px-4 relative bg-secondary/30">
+    <section id="contact" className="py-50 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          Let&apos;s <span className="text-primary"> Connect</span>
+        <h2 className="text-3xl md:text-4xl font-medium mb-4 text-center">
+          Let's Connect
         </h2>
+        <hr
+          className="my-10 h-px border-t-0 bg-transparent bg-linear-to-r from-white/0 via-white/30 to-transparent" />
 
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-muted-foreground mb-[4rem] max-w-2xl mx-auto">
           Have a project or opportunity in mind? I am always open to discussing new and exciting opportunities.
           Feel free to reach out.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-8">
-            <h3 className="text-2xl font-semibold mb-6">
-              {" "}
+            <h3 className="text-xl font-medium mb-10">
               Contact Information
             </h3>
 
-            <div className="space-y-6 justify-center">
+            <div className="space-y-10 justify-center">
               <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
+                <div className="p-3 rounded-full">
                   <Mail className="h-6 w-6 text-primary" />{" "}
                 </div>
-                <div>
+                <div className="flex flex-col items-start">
                   <h4 className="font-medium"> Email</h4>
                   <a
-                    href="mailto:hello@gmail.com"
+                    href="mailto:craig@foraefactory.com"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     craig@foraefactory.com
@@ -61,10 +62,10 @@ export const ContactSection = () => {
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
+                <div className="p-3 rounded-full">
                   <Phone className="h-6 w-6 text-primary" />{" "}
                 </div>
-                <div>
+                <div className="flex flex-col items-start">
                   <h4 className="font-medium"> Phone</h4>
                   <a
                     href="tel:+11234567890"
@@ -75,10 +76,10 @@ export const ContactSection = () => {
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
+                <div className="p-3 rounded-full">
                   <MapPin className="h-6 w-6 text-primary" />{" "}
                 </div>
-                <div>
+                <div className="flex flex-col items-start">
                   <h4 className="font-medium"> Location</h4>
                   <a className="text-muted-foreground hover:text-primary transition-colors">
                     Austin, TX, USA
@@ -86,10 +87,10 @@ export const ContactSection = () => {
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
+                <div className="p-3 rounded-full">
                   <Handshake className="h-6 w-6 text-primary" />{" "}
                 </div>
-                <div>
+                <div className="flex flex-col items-start">
                   <h4 className="font-medium"> LinkedIn</h4>
                   <a
                     href="https://www.linkedin.com/in/craigbrooks"
@@ -111,16 +112,16 @@ export const ContactSection = () => {
           </div>
 
           <div
-            className="bg-card p-8 rounded-lg shadow-xs"
+            className="bg-card/30 p-8 border-primary rounded-lg shadow-xs"
             onSubmit={handleSubmit}
           >
-            <h3 className="text-2xl font-semibold mb-6"> Send a Message</h3>
+            <h3 className="text-xl font-medium mb-10"> Send a Message</h3>
 
             <form className="space-y-6">
-              <div>
+              <div className="flex flex-col items-start">
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium mb-2"
+                  className="block text-md font-medium mb-2"
                 >
                   {" "}
                   Your Name
@@ -130,15 +131,15 @@ export const ContactSection = () => {
                   id="name"
                   name="name"
                   required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
+                  className="w-full px-4 py-3 rounded-md bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
                   placeholder="John Doe..."
                 />
               </div>
 
-              <div>
+              <div className="flex flex-col items-start">
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium mb-2"
+                  className="block text-md font-medium mb-2"
                 >
                   {" "}
                   Your Email
@@ -153,10 +154,10 @@ export const ContactSection = () => {
                 />
               </div>
 
-              <div>
+              <div className="flex flex-col items-start">
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium mb-2"
+                  className="block text-md font-medium mb-2"
                 >
                   {" "}
                   Your Message
@@ -174,7 +175,7 @@ export const ContactSection = () => {
                 type="submit"
                 disabled={isSubmitting}
                 className={cn(
-                  "cosmic-button w-full flex items-center justify-center gap-2"
+                  "cosmic-button w-[50%] flex items-center justify-center gap-2"
                 )}
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
@@ -184,6 +185,6 @@ export const ContactSection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 };
