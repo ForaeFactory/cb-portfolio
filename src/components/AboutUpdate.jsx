@@ -11,7 +11,7 @@ import { Image } from '../components/image';
 // import { Link } from '../components/link';
 import { Section } from '../components/Section';
 import { Text } from '../components/text';
-import { Transition } from '../components/transition';
+import { Transition } from '../components/Transition';
 import { Fragment, useState } from 'react';
 import { media } from '../lib/utils';
 

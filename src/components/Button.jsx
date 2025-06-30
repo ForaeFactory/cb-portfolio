@@ -2,7 +2,7 @@
 /* eslint-disable react/display-name */
 import { Icon } from '../components/icon';
 import { Loader } from '../components/loader';
-import { Transition } from '../components/transition';
+import { Transition } from '../components/Transition';
 import { Link } from 'react-router-dom';
 import { forwardRef } from 'react';
 import { classes } from '../lib/utils';

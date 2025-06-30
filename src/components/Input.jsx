@@ -2,7 +2,7 @@
 import { useId, useRef, useState } from 'react';
 import { Icon } from '../components/icon';
 import { tokens } from '../components/ThemeProvider/theme';
-import { Transition } from '../components/transition';
+import { Transition } from '../components/Transition';
 import { classes, cssProps, msToNum } from '../lib/utils';
 import { TextArea } from '../components/TextArea';
 

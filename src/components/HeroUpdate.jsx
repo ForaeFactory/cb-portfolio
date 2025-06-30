@@ -3,7 +3,7 @@ import { Heading } from '../components/Heading';
 import { Section } from '../components/Section';
 import { useTheme } from '../components/ThemeProvider/ThemeProvider';
 import { tokens } from '../components/ThemeProvider/theme';
-import { Transition } from '../components/transition';
+import { Transition } from '../components/Transition';
 import { VisuallyHidden } from '../components/visually-hidden';
 // import { ArrowDown } from "lucide-react";
 import { Link } from 'react-router-dom';

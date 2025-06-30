@@ -7,7 +7,7 @@ import { Image } from '../components/image';
 import { Section } from '../components/Section';
 import { Text } from '../components/text';
 import { tokens } from './ThemeProvider/theme';
-import { Transition } from '../components/transition';
+import { Transition } from '../components/Transition';
 import { useParallax } from '../hooks/useParallax';
 import { forwardRef, useRef } from 'react';
 import { classes, cssProps, msToNum, numToMs } from '../lib/utils';
