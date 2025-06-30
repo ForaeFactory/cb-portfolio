@@ -3,9 +3,9 @@
 import profileImgLarge from '../assets/profileImageR.png';
 import profileImgPlaceholder from '../assets/profile-placeholder.jpg';
 // import profileImg from '../assets/profileImageS.png';
-import { Button } from '../components/button';
+import { Button } from '../components/Button';
 // import { DecoderText } from '../components/decoder-text';
-import { Divider } from '../components/divider';
+import { Divider } from '../components/Divider';
 import { Heading } from '../components/Heading';
 import { Image } from '../components/image';
 // import { Link } from '../components/link';

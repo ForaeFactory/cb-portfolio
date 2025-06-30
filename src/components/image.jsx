@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { Button, ButtonVid } from '../components/button';
+import { Button } from '../components/Button';
 import { Icon } from '../components/icon';
 import { useTheme } from './ThemeProvider/ThemeProvider';
 import { useReducedMotion } from 'framer-motion';

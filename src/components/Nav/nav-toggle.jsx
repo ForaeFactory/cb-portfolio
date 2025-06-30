@@ -1,4 +1,4 @@
-import { Button } from '../../components/button';
+import { Button } from '../../components/Button';
 import { Icon } from '../../components/icon';
 
 // eslint-disable-next-line react/prop-types

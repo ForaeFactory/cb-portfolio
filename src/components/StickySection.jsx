@@ -1,14 +1,5 @@
 /* eslint-disable react/prop-types */
 import { useState, useRef, useEffect, Fragment } from 'react';
-import { Featured } from './Featured';
-import mulHero from '../assets/ultraBack_update.png';
-import blsHero from '../assets/blsBack_update.png';
-import budHero from '../assets/budBack_update.png';
-import khcHero from '../assets/khBack_update.png';
-import blsLogo from '../assets/logos/blsLogo.png';
-import budLogo from '../assets/logos/budLogo.png';
-import khLogo from '../assets/logos/khLogo.png';
-import ultraLogo from '../assets/logos/ultraLogo.png';
 
 // Background Imports
 import budBack from '../assets/budBack_update.png';
@@ -26,7 +17,6 @@ import khImg from '../assets/khBackground.png';
 import budVid from '../assets/bud/BeAKing-Teaser.mp4';
 import khVid from '../assets/khc/KHDR_Exp.mp4';
 import { ProjectsUpdate } from './FeaturedUpdate';
-import { Section } from './Section';
 
 // const sections = [
 //     { id: 'Michelob Ultra', abbr: 'mul', logo: ultraLogo, title: 'Look of the Leader', heading: 'Support your users with popular topics', body: 'Enhance the premium aesthetic of Michelob Ultra through trade and experiential to unleash the true potential of the brand.', image: mulHero, imgDesc: 'Woman runner crossing finish line' },
@@ -151,7 +141,7 @@ export const StickySections = ({ id, sectionRef, scrollIndicatorHidden, ...rest 
 
     return (
         <>
-                <ProjectsUpdate />
+            <ProjectsUpdate />
         </>
 
     )

@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { Formik, Form, useField } from "formik";
 import * as Yup from "yup";
 import { ThemeToggle } from "./ThemeToggle";
@@ -10,66 +10,12 @@ import { Transition } from "./Transition";
 import { Section } from "./Section";
 import { cssProps, msToNum, numToMs } from '../lib/utils';
 import { tokens } from '../components/ThemeProvider/theme';
-import { Divider } from "./divider";
+import { Divider } from "./Divider";
 import emailjs from '@emailjs/browser';
-import { Button } from "./button";
+import { Button } from "./Button";
 import { Text } from "./text";
 import { Icon } from "./icon"
 import { NavUpdate } from "./Nav/NavUpdate";
-
-
-// const MyTextInput = ({ label, ...props }) => {
-//     // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
-//     // which we can spread on <input> and alse replace ErrorMessage entirely.
-//     const [field, meta] = useField(props);
-//     const myFormick = useFormikContext();
-
-
-//     return (
-//         <>
-//             <label className="inputLabel" htmlFor={props.id || props.name}>{label}</label>
-//             <Input
-//                 className=" text-md rounded-md block w-full py-1.5 my-1.5  dark:placeholder-gray-400 dark:text-white"
-//                 {...field}
-//                 {...props} />
-//             {meta.touched && meta.error ? (
-//                 <div className="contactFormErrorMessage">{meta.error}</div>
-//             ) : null}
-//         </>
-//     );
-// };
-
-
-
-// function validateName(value) {
-//     let error;
-//     if (value === 'admin') {
-//         error = 'Nice try!';
-//     }
-//     return error;
-// }
-
-// function validateEmail(value) {
-//     let error;
-//     if (!value) {
-//         error = 'Required';
-//     } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
-//         error = 'Invalid email address';
-//     }
-//     return error;
-// }
-
-
-const MAX_EMAIL_LENGTH = 512;
-const MAX_MESSAGE_LENGTH = 4096;
-const EMAIL_PATTERN = /(.+)@(.+){2,}\.(.+){2,}/;
-
-const formValSchema = Yup.object().shape({
-    firstName: Yup.string().required('Please enter your name'),
-    lastName: Yup.string().min(2, "Too Short!").max(50, 'Too Long!'),
-    email: Yup.string().email('Invalid email address').required('Please enter an email address.'),
-    message: Yup.string().min(10, "Must be 10 characters or more").required("Required")
-})
 
 
 const NewInput = (props) => {
@@ -87,20 +33,12 @@ const NewInput = (props) => {
     );
 }
 
-
-
-
 // And now we can use these
 export const ContactUpdate = () => {
     const [resData, setResData] = useState();
     const [isSubmitting, setSubmitting] = useState(false);
     const initDelay = tokens.base.durationS;
-    const errorRef = useRef();
     const form = useRef();
-    // const firstName = useFormInput('');
-    // const lastName = useFormInput('');
-    // const email = useFormInput('');
-    // const message = useFormInput('');
     const sending = isSubmitting === true;
 
     emailjs.init({
