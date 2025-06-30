@@ -4,7 +4,7 @@ import { Section } from '../components/Section';
 import { useTheme } from '../components/ThemeProvider/ThemeProvider';
 import { tokens } from '../components/ThemeProvider/theme';
 import { Transition } from '../components/Transition';
-import { VisuallyHidden } from '../components/visually-hidden';
+import { VisuallyHidden } from '../components/Visually-Hidden';
 // import { ArrowDown } from "lucide-react";
 import { Link } from 'react-router-dom';
 import { useInterval } from '../hooks/useInterval';
