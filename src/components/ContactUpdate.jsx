@@ -1,8 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useRef, useState } from "react";
-import { Formik, Form, useField, useFormik, validateYupSchema, Field } from "formik";
+import { Formik, Form, useField } from "formik";
 import * as Yup from "yup";
-import styled from "@emotion/styled";
 import { ThemeToggle } from "./ThemeToggle";
 import { Heading } from "./Heading";
 import { Input } from "./Input";
@@ -72,12 +71,6 @@ const formValSchema = Yup.object().shape({
     message: Yup.string().min(10, "Must be 10 characters or more").required("Required")
 })
 
-
-// export async function action({ request }) {
-
-//     return JSON.stringify({ success: true });
-
-// }
 
 const NewInput = (props) => {
     const [field, meta] = useField(props);
