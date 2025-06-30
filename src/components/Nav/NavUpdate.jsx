@@ -119,7 +119,7 @@ export const NavUpdate = () => {
     const nonTrailing = current?.endsWith('/') ? current?.slice(0, -1) : current;
 
     if (url === nonTrailing) {
-      return 'page';
+      return 'page';https://music.youtube.com/watch?v=oCtYekG1qBc&si=SWEdHvCcUNcZuSgR
     }
 
     return '';

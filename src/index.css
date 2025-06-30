@@ -80,7 +80,7 @@
   --breakpoint-laptop: 64rem;
   --breakpoint-desktop: 80rem; */
 
- --mediaDesktop (max-width: 2080px);
+  --mediaDesktop (max-width: 2080px);
   --mediaLaptop (max-width: 1680px);
   --mediaTablet (max-width: 1040px);
   --mediaMobile (max-width: 696px);
@@ -89,7 +89,7 @@
   --mediaUseMotion (prefers-reduced-motion: no-preference);
   --mediaReduceMotion (prefers-reduced-motion: reduce);
   --mediaTouch (pointer: coarse);
-  --mediaNoTouch (pointer: fine); 
+  --mediaNoTouch (pointer: fine);
 
   --animate-float: float 6s ease-in-out infinite;
   --animate-pulse-subtle: pulse-subtle 4s ease-in-out infinite;
@@ -310,16 +310,16 @@
   }
   }
 
-  /* @custom-media --mediaDesktop (max-width: 2080px);
-  @custom-media --mediaLaptop (max-width: 1680px);
-  @custom-media --mediaTablet (max-width: 1040px);
-  @custom-media --mediaMobile (max-width: 696px);
-  @custom-media --mediaMobileLS (max-height: 696px);
-  @custom-media --mediaMobileS (max-width: 400px);
-  @custom-media --mediaUseMotion (prefers-reduced-motion: no-preference);
-  @custom-media --mediaReduceMotion (prefers-reduced-motion: reduce);
-  @custom-media --mediaTouch (pointer: coarse);
-  @custom-media --mediaNoTouch (pointer: fine); */
+@custom-media --mediaDesktop (max-width: 2080px);
+@custom-media --mediaLaptop (max-width: 1680px);
+@custom-media --mediaTablet (max-width: 1040px);
+@custom-media --mediaMobile (max-width: 696px);
+@custom-media --mediaMobileLS (max-height: 696px);
+@custom-media --mediaMobileS (max-width: 400px);
+@custom-media --mediaUseMotion (prefers-reduced-motion: no-preference);
+@custom-media --mediaReduceMotion (prefers-reduced-motion: reduce);
+@custom-media --mediaTouch (pointer: coarse);
+@custom-media --mediaNoTouch (pointer: fine);
 
 
 }
