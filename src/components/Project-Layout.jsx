@@ -23,23 +23,23 @@ export function ProjectHeader({
     className,
 }) {
     return (
-        <Section className="header" as="section">
+        <Section className="projHeader" as="section">
             <div
-                className="headerContent"
+                className="projHeaderContent"
                 style={cssProps({ initDelay: numToMs(initDelay) })}
             >
-                <div className="details">
-                    <Heading className='title' level={2} as="h1">
+                <div className="projDetails">
+                    <Heading className='projTitle' level={2} as="h1">
                         {title}
                     </Heading>
-                    <Text className="description" size="xl" as="p">
+                    <Text className="projDescription" size="xl" as="p">
                         {description}
                     </Text>
                     {!!url && (
                         <Button
                             secondary
                             iconHoverShift
-                            className="linkButton"
+                            className="projLinkButton"
                             icon="chevron-right"
                             href={url}
                         >
@@ -73,23 +73,23 @@ export function ProjectPageLeftHeader({
     className,
 }) {
     return (
-        <Section className={classes('leftHeader', className)} as="section">
+        <Section className={classes('projLeftHeader', className)} as="section">
             <div
-                className="headerLeftContent"
+                className="projHeaderLeftContent"
                 style={cssProps({ initDelay: numToMs(initDelay) })}
             >
-                <div className="details">
-                    <Heading className="title" level={2} as="h1">
+                <div className="projDetails">
+                    <Heading className="projTitle" level={2} as="h1">
                         {title}
                     </Heading>
-                    <Text className="description" size="xl" as="p">
+                    <Text className="projDescription" size="xl" as="p">
                         {description}
                     </Text>
                     {!!url && (
                         <Button
                             secondary
                             iconHoverShift
-                            className="linkButton"
+                            className="projLinkButton"
                             icon="chevron-right"
                             href={url}
                         >
@@ -122,7 +122,7 @@ export const ProjectSection = forwardRef(
         ref
     ) => (
         <section
-            className={classes('project-section', className)}
+            className={classes('projSection', className)}
             data-light={light}
             data-full-height={fullHeight}
             ref={ref}
@@ -130,13 +130,13 @@ export const ProjectSection = forwardRef(
         >
             {!!backgroundElement && (
                 <div
-                    className="sectionBackground"
+                    className="projSectionBackground"
                     style={cssProps({ opacity: backgroundOverlayOpacity })}
                 >
                     {backgroundElement}
                 </div>
             )}
-            <Section className="sectionInner" data-padding={padding}>
+            <Section className="projSectionInner" data-padding={padding}>
                 {children}
             </Section>
         </section>
@@ -158,7 +158,7 @@ export const ProjectPageSection = forwardRef(
         ref
     ) => (
         <section
-            className={classes("project-section", className)}
+            className={classes("projSection", className)}
             data-light={light}
             data-full-height={fullHeight}
             ref={ref}
@@ -166,13 +166,13 @@ export const ProjectPageSection = forwardRef(
         >
             {!!backgroundElement && (
                 <div
-                    className="sectionBackground"
+                    className="projSectionBackground"
                     style={cssProps({ opacity: backgroundOverlayOpacity })}
                 >
                     {backgroundElement}
                 </div>
             )}
-            <Section className="sectionLeftInner" data-padding={padding}>
+            <Section className="projSectionLeftInner" data-padding={padding}>
                 {children}
             </Section>
         </section>
@@ -194,7 +194,7 @@ export const ProjectImageSection = forwardRef(
         ref
     ) => (
         <section
-            className={classes("project-section", className)}
+            className={classes("projSection", className)}
             data-light={light}
             data-full-height={fullHeight}
             ref={ref}
@@ -217,14 +217,14 @@ export const ProjectBackground = ({ opacity = 0.8, className, ...rest }) => {
         <Transition in timeout={msToNum(tokens.base.durationM)}>
             {({ visible, nodeRef }) => (
                 <div
-                    className={classes("backgroundImage", className)}
+                    className={classes("projBackgroundImage", className)}
                     data-visible={visible}
                     ref={nodeRef}
                 >
-                    <div className="backgroundImageElement" ref={imageRef}>
+                    <div className="projBackgroundImageElement" ref={imageRef}>
                         <Image cover alt="" role="presentation" {...rest} />
                     </div>
-                    <div className="backgroundScrim" style={cssProps({ opacity })} />
+                    <div className="projBackgroundScrim" style={cssProps({ opacity })} />
                 </div>
             )}
         </Transition>
@@ -232,14 +232,14 @@ export const ProjectBackground = ({ opacity = 0.8, className, ...rest }) => {
 };
 
 export const ProjectImage = ({ className, alt, ...rest }) => (
-    <div className={classes("image", className)}>
+    <div className={classes("projImage", className)}>
         <Image reveal alt={alt} delay={300} {...rest} />
     </div>
 );
 
 export const ProjectSectionContent = ({ className, width = 'l', ...rest }) => (
     <div
-        className={classes("sectionContent", className)}
+        className={classes("projSectionContent", className)}
         data-width={width}
         {...rest}
     />
@@ -254,7 +254,7 @@ export const ProjectDescContent = ({
     className, width = 'l', ...rest }) => (
     <>
         <div
-            className={classes("sectionContent", className)}
+            className={classes("projSectionContent", className)}
             data-width={width}
             {...rest}
         />
@@ -262,7 +262,7 @@ export const ProjectDescContent = ({
             <Button
                 secondary
                 iconHoverShift
-                className="linkButton"
+                className="projLinkButton"
                 icon="chevron-right"
                 href={url}
             >
@@ -274,7 +274,7 @@ export const ProjectDescContent = ({
 
 export const ProjectImageContent = ({ className, width = 'l', ...rest }) => (
     <div
-        className={classes("sectionContent", className)}
+        className={classes("projSectionContent", className)}
         data-width={width}
         {...rest}
     />
@@ -282,7 +282,7 @@ export const ProjectImageContent = ({ className, width = 'l', ...rest }) => (
 
 export const ProjectSectionHeading = ({ className, level = 3, as = 'h2', ...rest }) => (
     <Heading
-        className={classes("sectionHeading", className)}
+        className={classes("projSectionHeading", className)}
         as={as}
         level={level}
         align="auto"
@@ -291,11 +291,11 @@ export const ProjectSectionHeading = ({ className, level = 3, as = 'h2', ...rest
 );
 
 export const ProjectSectionText = ({ className, ...rest }) => (
-    <Text className={classes("sectionText", className)} size="l" as="p" {...rest} />
+    <Text className={classes("projSectionText", className)} size="l" as="p" {...rest} />
 );
 
 export const ProjectPageText = ({ className, ...rest }) => (
-    <Text className={classes("sectionProjectText", className)} size="l" as="p" {...rest} />
+    <Text className={classes("projSectionProjectText", className)} size="l" as="p" {...rest} />
 );
 
 export const ProjectTextRow = ({
@@ -344,7 +344,7 @@ export const HonorTextRow = ({
 
 export const ProjectSectionColumns = ({ className, centered, ...rest }) => (
     <ProjectSectionContent
-        className={classes("sectionColumns", className)}
+        className={classes("projSectionColumns", className)}
         data-centered={centered}
         {...rest}
     />

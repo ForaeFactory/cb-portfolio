@@ -96,14 +96,13 @@ export const ProjectsUpdate = ({ id, sectionRef, ...rest }) => {
         <div className=''
             id={id}
             ref={sectionRef}
-
         >
             <NavUpdate />
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
             {projects.map((project, key) => (
                 <ProjectContainer key={key}>
                     <ProjectSection
-                        backgroundOverlayOpacity={0.5}
+                        backgroundOverlayOpacity={0.9}
                         backgroundElement={
                             <Image
                                 srcSet={`${project.imgBack} 1280w, ${project.imgBack} 2560w`}

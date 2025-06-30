@@ -12,7 +12,6 @@ import { NavToggle } from './nav-toggle';
 // import { ThemeToggle } from './theme-toggle';
 import { navLinks, socialLinks } from './nav-data';
 import config from '../../config.json';
-import { ThemeToggleUpdate } from '../ThemeToggleUpdate';
 // import styles from './navbar.module.css';
 
 export const NavUpdate = () => {
@@ -23,7 +22,7 @@ export const NavUpdate = () => {
   const location = useLocation();
   const windowSize = useWindowSize();
   const headerRef = useRef();
-  const isMobile = windowSize.width <= media.mobile || windowSize.height <= 696;
+  // const isMobile = windowSize.width <= media.mobile || windowSize.height <= 696;
   const scrollToHash = useScrollToHash();
 
   useEffect(() => {
@@ -119,7 +118,7 @@ export const NavUpdate = () => {
     const nonTrailing = current?.endsWith('/') ? current?.slice(0, -1) : current;
 
     if (url === nonTrailing) {
-      return 'page';https://music.youtube.com/watch?v=oCtYekG1qBc&si=SWEdHvCcUNcZuSgR
+      return 'page';
     }
 
     return '';

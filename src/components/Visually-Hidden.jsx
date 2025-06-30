@@ -9,7 +9,7 @@ export const VisuallyHidden = forwardRef(
     ) => {
         return (
             <Component
-                className={classes("hidden", className)}
+                className={classes("visHidden", className)}
                 data-hidden={!visible && !showOnFocus}
                 data-show-on-focus={showOnFocus}
                 ref={ref}

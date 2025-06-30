@@ -14,6 +14,7 @@ import { ProfileUpdate } from '../components/AboutUpdate';
 import { FooterUpdate } from '../components/FooterUpdate';
 import { Showcase } from '../components/Showcase';
 import { ProjectsUpdate } from '../components/FeaturedUpdate';
+import { ThemeToggleUpdate } from '../components/ThemeToggleUpdate';
 
 export const Home = () => {
   const [visibleSections, setVisibleSections] = useState([]);
@@ -28,7 +29,7 @@ export const Home = () => {
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
-        entries.forEach(entry => {p
+        entries.forEach(entry => {
           if (entry.isIntersecting) {
             const section = entry.target;
             observer.unobserve(section);
@@ -49,11 +50,9 @@ export const Home = () => {
 
     sections.forEach(section => {
       sectionObserver.observe(section.current);
-      // console.log("Section.current: ", section.current)
     });
 
     if (intro.current && intro.current instanceof Element) {
-      console.log("intro.current: ", intro.current)
       // setTimeout(indicatorObserver.observe(intro.current), 500)
       indicatorObserver.observe(intro.current);
     }
@@ -68,7 +67,7 @@ export const Home = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Theme Toggle */}
-      {/* <ThemeToggle /> */}
+      <ThemeToggle />
       {/* Background Effects */}
       {/* <StarBackground /> */}
 

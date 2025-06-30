@@ -165,10 +165,10 @@ const ImageElements = ({
                         {...rest}
                     />
                     {!noPauseButton && (
-                        <ButtonVid className='vidImgButton' onClick={togglePlaying}>
-                            <Icon className='text-white' icon={playing ? 'pause' : 'play'} />
+                        <Button className='imgButton' onClick={togglePlaying}>
+                            <Icon icon={playing ? 'pause' : 'play'} />
                             {playing ? 'Pause' : 'Play'}
-                        </ButtonVid>
+                        </Button>
                     )}
                 </Fragment>
             )}
@@ -191,7 +191,7 @@ const ImageElements = ({
             {showPlaceholder && (
                 <img
                     aria-hidden
-                    className='placeholder'
+                    className='imgPlaceholder'
                     data-loaded={loaded}
                     data-cover={cover}
                     style={cssProps({ delay: numToMs(delay) })}

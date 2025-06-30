@@ -1,32 +1,24 @@
 /* eslint-disable react/prop-types */
-import { Heading } from '../components/heading';
+import { Heading } from '../components/Heading';
 import { Section } from '../components/Section';
 import { useTheme } from '../components/ThemeProvider/ThemeProvider';
 import { tokens } from '../components/ThemeProvider/theme';
 import { Transition } from '../components/transition';
 import { VisuallyHidden } from '../components/visually-hidden';
-import { ArrowDown } from "lucide-react";
+// import { ArrowDown } from "lucide-react";
 import { Link } from 'react-router-dom';
 import { useInterval } from '../hooks/useInterval';
 import { usePrevious } from '../hooks/usePrevious';
 import { useScrollToHash } from '../hooks/useScrollToHash';
 import { useEffect, useState } from 'react';
 import { cssProps } from '../lib/utils';
+import config from '../config.json';
 // import styles from './intro.module.css';
 
 // const DisplacementSphere = lazy(() =>
 //   import('./displacement-sphere').then(module => ({ default: module.DisplacementSphere }))
 // );
 
-const config = {
-    "name": "Craig Brooks",
-    "role": "Designer",
-    "disciplines": ["Creator", "Innovator", "Director", "Motivator", "Developer"],
-    "url": "https://foraefactory.com",
-    "linkedin": "craigbrooks",
-    "repo": "https://github.com/ForaeFactory/cb-design",
-    "ascii": "__  __  __\n\u005C \u005C \u005C \u005C \u005C\u2215\n \u005C \u005C\u2215\u005C \u005C\n  \u005C\u2215  \u005C\u2215\n"
-}
 
 export function HeroUpdate({ id, sectionRef, scrollIndicatorHidden, ...rest }) {
     const { theme } = useTheme();
@@ -62,7 +54,7 @@ export function HeroUpdate({ id, sectionRef, scrollIndicatorHidden, ...rest }) {
     return (
         <Section
             ref={sectionRef}
-            className="introSection"
+            className="intro"
             as="section"
             id={id}
             aria-labelledby={titleId}
@@ -84,7 +76,7 @@ export function HeroUpdate({ id, sectionRef, scrollIndicatorHidden, ...rest }) {
                                     <span
                                         className="introWord"
                                         data-status={status}
-                                    // style={cssProps({ delay: tokens.base.durationXS })}
+                                        style={cssProps({ delay: "200ms" })}
                                     >
                                         {config.role}
                                     </span>
@@ -105,7 +97,7 @@ export function HeroUpdate({ id, sectionRef, scrollIndicatorHidden, ...rest }) {
                                                     className="introWord"
                                                     data-plus={true}
                                                     data-status={status}
-                                                // style={cssProps({ delay: tokens.base.durationL })}
+                                                    style={cssProps({ delay: "600ms" })}
                                                 >
                                                     {item}
                                                 </span>

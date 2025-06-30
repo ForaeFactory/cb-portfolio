@@ -56,7 +56,7 @@ const ButtonContent = forwardRef(
 
         return (
             <Component
-                className={classes('mainButton', className)}
+                className={classes('button', className)}
                 data-loading={loading}
                 data-icon-only={iconOnly}
                 data-secondary={secondary}
@@ -145,7 +145,7 @@ const ButtonVidContent = forwardRef(
 
         return (
             <Component
-                className="imgButton"
+                className="button"
                 data-loading={loading}
                 data-icon-only={iconOnly}
                 data-secondary={secondary}
@@ -165,7 +165,7 @@ const ButtonVidContent = forwardRef(
                         icon={icon}
                     />
                 )}
-                {!!children && <span className="vidButtonText">{children}</span>}
+                {!!children && <span className="btnText">{children}</span>}
                 {!!iconEnd && (
                     <Icon
                         className="btnIcon"
@@ -178,7 +178,7 @@ const ButtonVidContent = forwardRef(
                     {({ visible, nodeRef }) => (
                         <Loader
                             ref={nodeRef}
-                            className="vidButtonLoader"
+                            className="btnLoader"
                             size={32}
                             text={loadingText}
                             data-visible={visible}

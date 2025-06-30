@@ -6,7 +6,7 @@ import profileImgPlaceholder from '../assets/profile-placeholder.jpg';
 import { Button } from '../components/button';
 // import { DecoderText } from '../components/decoder-text';
 import { Divider } from '../components/divider';
-import { Heading } from '../components/heading';
+import { Heading } from '../components/Heading';
 import { Image } from '../components/image';
 // import { Link } from '../components/link';
 import { Section } from '../components/Section';
@@ -59,7 +59,7 @@ export const ProfileUpdate = ({ id, visible, sectionRef }) => {
                             <ProfileText visible={visible} titleId={titleId} />
                             <Button
                                 secondary
-                                className="profSvg"
+                                className="profButton"
                                 data-visible={visible}
                                 href="/connect"
                                 icon="send"

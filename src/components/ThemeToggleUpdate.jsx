@@ -20,16 +20,16 @@ export const ThemeToggleUpdate = ({ isMobile, ...rest }) => {
             <svg aria-hidden className="svg" width="38" height="38" viewBox="0 0 38 38">
                 <defs>
                     <mask id={maskId}>
-                        <circle className="themeCircle" data-mask={true} cx="19" cy="19" r="13" />
-                        <circle className="themeMask" cx="25" cy="14" r="9" />
+                        <circle className="circle" data-mask={true} cx="19" cy="19" r="13" />
+                        <circle className="mask" cx="25" cy="14" r="9" />
                     </mask>
                 </defs>
                 <path
-                    className="themePath"
+                    className="path"
                     d="M19 3v7M19 35v-7M32.856 11l-6.062 3.5M5.144 27l6.062-3.5M5.144 11l6.062 3.5M32.856 27l-6.062-3.5"
                 />
                 <circle
-                    className="themeCircle"
+                    className="circle"
                     mask={`url(#${maskId})`}
                     cx="19"
                     cy="19"

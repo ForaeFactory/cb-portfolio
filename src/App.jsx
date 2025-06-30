@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { useState, useContext, createContext } from 'react';
+// import { useState, useContext, createContext } from 'react';
 import { Home } from "./pages/Home";
 import { NotFound } from "./pages/NotFound";
 import { Toaster } from "@/components/ui/toaster";
@@ -16,19 +16,19 @@ import { UltraUpdate } from "./components/UltraUpdate";
 import { KHUpdate } from "./components/KHCUpdate";
 import { ProjectsUpdate } from "./components/FeaturedUpdate";
 import { ContactUpdate } from "./components/ContactUpdate";
-import { NavUpdate } from "./components/Nav/NavUpdate";
+// import { NavUpdate } from "./components/Nav/NavUpdate";
 import { Showcase } from "./components/Showcase";
+import { ThemeToggle } from "./components/ThemeToggle";
+// import { ThemeToggleUpdate } from "./components/ThemeToggleUpdate";
 
 
 function App() {
-
-
 
   return (
     <>
       <Toaster />
       <BrowserRouter>
-        {/* <NavUpdate /> */}
+        {/* <ThemeToggle /> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<ProjectsUpdate />} />

@@ -41,7 +41,7 @@ import {
 import { Fragment } from 'react';
 import { media, baseMeta } from '../lib/utils.js';
 import { ImageCarousel } from './ImageCarousel.jsx';
-import { ThemeToggle } from "./ThemeToggle.jsx";
+// import { ThemeToggle } from "./ThemeToggle.jsx";
 
 
 const images = [
