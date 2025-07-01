@@ -436,11 +436,11 @@
   }
   @keyframes text-reveal {
     0% {
-      color: color-mix(in lab, var(--color-red-400) 0%, transparent);
+      color: color-mix(in lab, var(--background) 0%);
     }
 
     50% {
-      color: color-mix(in lab, var(--color-red-400) 0%, transparent);
+      color: color-mix(in lab, var(--background) 0%);
     }
 
     60% {
@@ -1661,12 +1661,12 @@
 
 @keyframes introTextReveal {
   0% {
-    color: color-mix(in lab, var(--text) 0%, transparent);
+    color: color-mix(in lab, var(--background) 0%, transparent);
   }
-  50% {
-    color: color-mix(in lab, var(--text) 0%, transparent);
+  69% {
+    color: color-mix(in lab, var(--background) 0%, transparent);
   }
-  60% {
+  70% {
     color: var(--textTitle);
   }
   100% {
@@ -1684,8 +1684,8 @@
   animation-delay: var(--delay);
   animation-fill-mode: forwards;
   animation-timing-function: var(--bezierFastoutSlowin);
-  color: color-mix(in lab, var(--text) 0%, transparent);
-  transition: opacity 0.5s ease var(--durationM);
+  color: color-mix(in lab, var(--background) 0%, transparent);
+  transition: opacity 0.4s ease var(--durationM);
   isolation: isolate;
 
   &::after {
