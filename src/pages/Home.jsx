@@ -1,20 +1,13 @@
 import { useRef, useEffect, useState } from 'react';
-// import { Navbar } from "../components/Navbar";
-import { ThemeToggle } from "../components/ThemeToggle";
-// import { StarBackground } from "@/components/StarBackground";
-import { HeroSection } from "../components/HeroSection";
-import { AboutSection } from "../components/AboutSection";
+
 import { SkillsSection } from "../components/SkillsSection";
-import { ContactSection } from "../components/ContactSection";
-import { Footer } from "../components/Footer";
-import { StickySections } from "../components/StickySection";
 import { HeroUpdate } from "../components/HeroUpdate";
 import { NavUpdate } from '../components/Nav/NavUpdate';
 import { ProfileUpdate } from '../components/AboutUpdate';
 import { FooterUpdate } from '../components/FooterUpdate';
-import { Showcase } from '../components/Showcase';
+
 import { ProjectsUpdate } from '../components/FeaturedUpdate';
-import { ThemeToggleUpdate } from '../components/ThemeToggleUpdate';
+
 
 export const Home = () => {
   const [visibleSections, setVisibleSections] = useState([]);
@@ -25,7 +18,7 @@ export const Home = () => {
   const snapshot = useRef();
 
   useEffect(() => {
-    const sections = [intro, skills, snapshot];
+    const sections = [intro, projects, skills, snapshot];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -53,10 +46,8 @@ export const Home = () => {
     });
 
     if (intro.current && intro.current instanceof Element) {
-      // setTimeout(indicatorObserver.observe(intro.current), 500)
       indicatorObserver.observe(intro.current);
     }
-
 
     return () => {
       sectionObserver.disconnect();
@@ -66,14 +57,7 @@ export const Home = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Theme Toggle */}
-      <ThemeToggle />
-      {/* Background Effects */}
-      {/* <StarBackground /> */}
-
-      {/* Navbar */}
-      {/* <NavUpdate /> */}
-      {/* Main Content */}
+      <NavUpdate />
       <main>
         <HeroUpdate
           id="intro"
@@ -97,8 +81,6 @@ export const Home = () => {
           visible={visibleSections.includes(skills.current)} />
 
       </main>
-
-      {/* Footer */}
       <FooterUpdate />
     </div>
   );

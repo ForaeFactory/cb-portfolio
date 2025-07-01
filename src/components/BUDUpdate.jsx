@@ -34,7 +34,6 @@ import {
     ProjectHeader,
     ProjectImage,
     ProjectSection,
-    // ProjectSectionColumns,
     ProjectSectionContent,
     ProjectSectionHeading,
     ProjectSectionText,
@@ -44,9 +43,7 @@ import {
 import { Fragment } from 'react';
 import { media, baseMeta } from '../lib/utils.js';
 import { ImageCarousel } from './ImageCarousel.jsx';
-import { ThemeToggle } from "./ThemeToggle.jsx";
 import { useTheme } from '../components/ThemeProvider/ThemeProvider.jsx';
-// import { ThemeProvider } from '../components/ThemeProvider/ThemeProvider.jsx';
 
 const conceptImages = [
     { key: 1, url: budConcept1, desc: "Billboard designs used as concepts" },
@@ -73,9 +70,6 @@ export const meta = () => {
 };
 
 export const BUDUpdate = () => {
-    const { theme, toggleTheme } = useTheme();
-    const isDark = theme === 'dark';
-    const themes = ['dark', 'light'];
 
     return (
         <Fragment>

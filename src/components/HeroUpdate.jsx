@@ -5,7 +5,6 @@ import { useTheme } from '../components/ThemeProvider/ThemeProvider';
 import { tokens } from '../components/ThemeProvider/theme';
 import { Transition } from '../components/Transition';
 import { VisuallyHidden } from '../components/Visually-Hidden';
-// import { ArrowDown } from "lucide-react";
 import { Link } from 'react-router-dom';
 import { useInterval } from '../hooks/useInterval';
 import { usePrevious } from '../hooks/usePrevious';
@@ -13,11 +12,6 @@ import { useScrollToHash } from '../hooks/useScrollToHash';
 import { useEffect, useState } from 'react';
 import { cssProps } from '../lib/utils';
 import config from '../config.json';
-// import styles from './intro.module.css';
-
-// const DisplacementSphere = lazy(() =>
-//   import('./displacement-sphere').then(module => ({ default: module.DisplacementSphere }))
-// );
 
 
 export function HeroUpdate({ id, sectionRef, scrollIndicatorHidden, ...rest }) {
@@ -137,10 +131,6 @@ export function HeroUpdate({ id, sectionRef, scrollIndicatorHidden, ...rest }) {
                     </>
                 )}
             </Transition>
-            {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
-                <span className="text-md text-muted-foreground mb-2"> Scroll </span>
-                <ArrowDown className="h-7 w-7 text-primary" />
-            </div> */}
         </Section>
     );
 }

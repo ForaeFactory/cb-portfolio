@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import { cn } from "../lib/utils";
 import { Section } from "./Section";
@@ -59,6 +60,7 @@ export const SkillsSection = ({ id, visible, sectionRef }) => {
       as="section"
       id={id}
       ref={sectionRef}
+      visible={visible}
       aria-labelledby={titleId}
       tabIndex={-1}>
       <div className="container mx-auto max-w-5xl">

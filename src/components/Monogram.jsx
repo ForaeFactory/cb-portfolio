@@ -1,4 +1,6 @@
+/* eslint-disable react/prop-types */
 import { forwardRef, useId } from 'react';
+import { classes } from '../lib/utils';
 
 // eslint-disable-next-line react/display-name
 export const Monogram = forwardRef(({ highlight, className, ...props }, ref) => {
@@ -8,7 +10,7 @@ export const Monogram = forwardRef(({ highlight, className, ...props }, ref) => 
     return (
         <svg
             aria-hidden
-            className="monogram"
+            className={classes("monogram", className)}
             width="48"
             height="48"
             viewBox="0 0 48 53"

@@ -17,8 +17,8 @@ import { KHUpdate } from "./components/KHCUpdate";
 import { ProjectsUpdate } from "./components/FeaturedUpdate";
 import { ContactUpdate } from "./components/ContactUpdate";
 // import { NavUpdate } from "./components/Nav/NavUpdate";
-import { Showcase } from "./components/Showcase";
 import { ThemeToggle } from "./components/ThemeToggle";
+import { NavUpdate } from "./components/Nav/NavUpdate";
 // import { ThemeToggleUpdate } from "./components/ThemeToggleUpdate";
 
 
@@ -28,7 +28,8 @@ function App() {
     <>
       <Toaster />
       <BrowserRouter>
-        {/* <ThemeToggle /> */}
+        <NavUpdate />
+        <ThemeToggle />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<ProjectsUpdate />} />
@@ -38,7 +39,7 @@ function App() {
           <Route path="/projects/kh-digital" element={<KHUpdate />} />
           <Route path="/projects/bls-flavor" element={<BLSUpdate />} />
           <Route path="/projects/bud-king" element={<BUDUpdate />} />
-          <Route path="/projects/testing" element={<Showcase />} />
+          {/* <Route path="/projects/testing" element={<Showcase />} /> */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

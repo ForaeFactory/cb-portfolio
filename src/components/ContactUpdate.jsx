@@ -1,12 +1,10 @@
 /* eslint-disable react/prop-types */
 import { useRef, useState } from "react";
 import { Formik, Form, useField } from "formik";
-import * as Yup from "yup";
 import { ThemeToggle } from "./ThemeToggle";
 import { Heading } from "./Heading";
 import { Input } from "./Input";
 import { Transition } from "./Transition";
-// import { useFormInput } from '../hooks/useFormInput';
 import { Section } from "./Section";
 import { cssProps, msToNum, numToMs } from '../lib/utils';
 import { tokens } from '../components/ThemeProvider/theme';
@@ -24,7 +22,7 @@ const NewInput = (props) => {
         <>
             <Input {...field} {...props} data-error={meta.error && meta.touched ? true : false} />
             {meta.touched && meta.error ?
-                <div className="contactFormErrorMessage">
+                <div className="inputErrorMessage">
                     <Icon className="contactFormErrorIcon" icon="error" />
                     {meta.error}
                 </div>
@@ -36,6 +34,7 @@ const NewInput = (props) => {
 // And now we can use these
 export const ContactUpdate = () => {
     const [resData, setResData] = useState();
+    // eslint-disable-next-line no-unused-vars
     const [isSubmitting, setSubmitting] = useState(false);
     const initDelay = tokens.base.durationS;
     const form = useRef();
@@ -62,11 +61,9 @@ export const ContactUpdate = () => {
                 .then(
                     (response) => {
                         setResData({ success: response.text });
-                        console.log("resData: ", resData)
                     },
                     (error) => {
                         setResData({ error: error.text });
-                        console.log("resData: ", resData)
                     },
                 )
         }
@@ -84,11 +81,10 @@ export const ContactUpdate = () => {
                         email: '',
                         message: ''
                     }}
-                    // validationSchema={formValSchema}
                     validate={values => {
                         const errors = {}
                         if (!values.firstName) {
-                            errors.firstName = 'Required';
+                            errors.firstName = 'Please fill in this field';
                         } else if (values.firstName.length > 15) {
                             errors.firstName = 'Must be 15 characters or less';
                         }
@@ -98,7 +94,7 @@ export const ContactUpdate = () => {
                         }
 
                         if (!values.email) {
-                            errors.email = 'Required';
+                            errors.email = 'Please fill in this field';
                         } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
                             errors.email = 'Invalid email address';
                         }
@@ -108,7 +104,7 @@ export const ContactUpdate = () => {
                     onSubmit={errors => sendEmail(errors)}
                 >
                     <Transition unmount in={!resData?.success} timeout={1600} >
-                        {({ status, nodeRef, errors }) => (
+                        {({ status, errors }) => (
                             <Form
                                 id="connectForm"
                                 className='contactForm'

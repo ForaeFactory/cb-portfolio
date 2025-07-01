@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useLocation } from 'react-router-dom';
 import { Button } from '../components/Button';
 import { Image } from '../components/image';
@@ -42,8 +43,6 @@ export const meta = () => {
 
 export const ProjectsUpdate = ({ id, sectionRef, ...rest }) => {
     const location = useLocation();
-
-    console.log(location.pathname)
 
     const projects = [
         {
@@ -98,7 +97,6 @@ export const ProjectsUpdate = ({ id, sectionRef, ...rest }) => {
             ref={sectionRef}
         >
             <NavUpdate />
-            {/* <ThemeToggle /> */}
             {projects.map((project, key) => (
                 <ProjectContainer key={key}>
                     <ProjectSection

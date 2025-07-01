@@ -67,16 +67,15 @@ export const ImageCarousel = ({ images }) => {
     const navClick = (index) => {
         setDirection(index > currentIndex ? 'right' : 'left');
         setCurrentIndex(index);
-        console.log(currentIndex);
     };
 
     return (
         <div className="carousel">
-            <div className="content">
-                <div className="imageWrapper">
+            <div className="carouselContent">
+                <div className="carouselImageWrapper">
                     <AnimatePresence>
                         <motion.img
-                            className="placeholder rounded-lg"
+                            className="carouselPlaceholder rounded-lg"
                             key={images[currentIndex].key}
                             src={images[currentIndex].url}
                             alt={images.desc}
@@ -104,11 +103,11 @@ export const ImageCarousel = ({ images }) => {
                     <ArrowRight />
                 </button>
             </div>
-            <div className="nav flex flex-row mx-auto justify-center" >
+            <div className="carouselNav flex flex-row mx-auto justify-center" >
 
                 {images.map((image, index) => (
                     <button
-                        className="navButton"
+                        className="carouselNavButton"
                         key={image.alt}
                         onClick={() => navClick(index)}
                         aria-label={`Jump to slide ${index + 1}`}
@@ -120,10 +119,3 @@ export const ImageCarousel = ({ images }) => {
         </div>
     );
 };
-
-{/* <div className="flex flex-wrap justify-center gap-4 mb-12">
-              <button onClick={() => prevImage()}></button>
-              <image />
-              <button onClick={() => nextImage()></button>
-
-              */}

@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { VisuallyHidden } from '../components/visually-hidden';
+import { VisuallyHidden } from '../components/Visually-Hidden';
 import {
     createContext,
     useCallback,
@@ -10,7 +10,6 @@ import {
     useState,
 } from 'react';
 import { cssProps } from '../lib/utils';
-// import styles from './segmented-control.module.css';
 
 const SegmentedControlContext = createContext({});
 
@@ -61,8 +60,6 @@ export const SegmentedControl = ({
             resizeObserver.observe(currentOption);
         }
 
-        // resizeObserver.observe(currentOption);
-
         return () => {
             resizeObserver.disconnect();
         };
@@ -103,7 +100,7 @@ export const SegmentedControlOption = ({ children, ...props }) => {
         useContext(SegmentedControlContext);
     const optionRef = useRef();
     const index = optionRefs.current.indexOf(optionRef);
-    const isSelected = currentIndex === index;
+    // const isSelected = currentIndex === index;
 
     useEffect(() => {
         registerOption(optionRef);

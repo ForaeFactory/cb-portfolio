@@ -67,7 +67,6 @@ export const meta = () => {
 export const KHUpdate = () => {
     const [theme, setTheme] = useState();
     const [isChecked, setIsChecked] = useState(true)
-    // const isDark = theme === 'dark';
     const [isDark, setIsDark] = useState(true);
 
     const themeSwitch = () => {
@@ -86,7 +85,6 @@ export const KHUpdate = () => {
 
     const handleThemeChange = () => {
         themeSwitch();
-
     };
 
     return (

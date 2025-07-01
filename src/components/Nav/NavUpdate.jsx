@@ -9,10 +9,9 @@ import { useLocation, Link } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 import { cssProps, msToNum, numToMs } from '../../lib/utils';
 import { NavToggle } from './nav-toggle';
-// import { ThemeToggle } from './theme-toggle';
 import { navLinks, socialLinks } from './nav-data';
 import config from '../../config.json';
-// import styles from './navbar.module.css';
+
 
 export const NavUpdate = () => {
   const [current, setCurrent] = useState();
@@ -22,7 +21,6 @@ export const NavUpdate = () => {
   const location = useLocation();
   const windowSize = useWindowSize();
   const headerRef = useRef();
-  // const isMobile = windowSize.width <= media.mobile || windowSize.height <= 696;
   const scrollToHash = useScrollToHash();
 
   useEffect(() => {
@@ -116,11 +114,9 @@ export const NavUpdate = () => {
   // Check if a nav item should be active
   const getCurrent = (url = '') => {
     const nonTrailing = current?.endsWith('/') ? current?.slice(0, -1) : current;
-
     if (url === nonTrailing) {
       return 'page';
     }
-
     return '';
   };
 
@@ -132,13 +128,13 @@ export const NavUpdate = () => {
     if (hash && location.pathname === '/') {
       setTarget(`#${hash}`);
       event.preventDefault();
-    }
-  };
+      }
+    };
 
-  const handleMobileNavClick = event => {
-    handleNavItemClick(event);
-    if (menuOpen) setMenuOpen(false);
-  };
+    const handleMobileNavClick = event => {
+      handleNavItemClick(event);
+      if (menuOpen) setMenuOpen(false);
+    };
 
   return (
     <header className="navbar" ref={headerRef}>

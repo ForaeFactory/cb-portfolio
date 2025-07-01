@@ -3,6 +3,7 @@ import { Button } from '~/components/button';
 import { useTheme } from '~/components/theme-provider';
 import styles from './theme-toggle.module.css';
 
+// eslint-disable-next-line react/prop-types
 export const ThemeToggle = ({ isMobile, ...rest }) => {
   const id = useId();
   const { toggleTheme } = useTheme();

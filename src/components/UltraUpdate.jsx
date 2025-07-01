@@ -31,7 +31,6 @@ import mulTrade3 from '../assets/ultra/mulTrade3_1.png';
 import mulTrade4 from '../assets/ultra/mulTrade4_1.png';
 import mulTrade5 from '../assets/ultra/mulTrade5.png';
 
-import { Footer } from "./Footer.jsx";
 import { Image } from './image.jsx';
 import {
     ProjectBackground,
@@ -49,7 +48,7 @@ import {
 import { Fragment } from 'react';
 import { media, baseMeta } from '../lib/utils';
 import { ImageCarousel } from './ImageCarousel.jsx';
-import { ThemeToggle } from "./ThemeToggle.jsx";
+import { FooterUpdate } from './FooterUpdate.jsx';
 
 
 const expCarousel = [
@@ -81,6 +80,7 @@ export const meta = () => {
 };
 
 export const UltraUpdate = () => {
+
     return (
         <Fragment>
             {/* <ThemeToggle /> */}
@@ -230,7 +230,7 @@ export const UltraUpdate = () => {
                     />
                 </ProjectImageSection>
             </ProjectContainer>
-            <Footer />
+            <FooterUpdate />
         </Fragment>
     );
 };
