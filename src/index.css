@@ -1663,10 +1663,10 @@
   0% {
     color: color-mix(in lab, var(--background) 0%, transparent);
   }
-  69% {
+  50% {
     color: color-mix(in lab, var(--background) 0%, transparent);
   }
-  70% {
+  60% {
     color: var(--textTitle);
   }
   100% {
