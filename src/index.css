@@ -1685,7 +1685,7 @@
   animation-fill-mode: forwards;
   animation-timing-function: var(--bezierFastoutSlowin);
   color: color-mix(in lab, var(--background) 0%, transparent);
-  transition: opacity 0.4s ease var(--durationM);
+  transition: opacity 0.4s ease var(--durationS);
   isolation: isolate;
 
   &::after {
