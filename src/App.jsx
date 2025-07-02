@@ -32,7 +32,7 @@ function App() {
         <ThemeToggle />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<ProjectsUpdate />} />
+          <Route path="/#projects" element={<ProjectsUpdate />} />
           <Route path="/connect" element={<ContactUpdate />} />
           {/* <Route path="/projects" element={<Projects />} /> */}
           <Route path="/projects/ultra-leader" element={<UltraUpdate />} />

@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-
+import { ArrowUp } from 'lucide-react';
 // Background Image Set
 import budBack from '../assets/budLarge.png';
 
@@ -40,10 +40,12 @@ import {
     ProjectTextRow,
     ProjectImageSection,
 } from './Project-Layout.jsx';
-import { Fragment } from 'react';
+import { Fragment, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { media, baseMeta } from '../lib/utils.js';
 import { ImageCarousel } from './ImageCarousel.jsx';
 import { useTheme } from '../components/ThemeProvider/ThemeProvider.jsx';
+import { FooterUpdate } from './FooterUpdate.jsx';
 
 const conceptImages = [
     { key: 1, url: budConcept1, desc: "Billboard designs used as concepts" },
@@ -70,6 +72,15 @@ export const meta = () => {
 };
 
 export const BUDUpdate = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location.pathname]);
+
+    const handleClick = () => {
+        window.scrollTo(0, 0);
+    };
 
     return (
         <Fragment>
@@ -175,7 +186,11 @@ export const BUDUpdate = () => {
                     />
                 </ProjectImageSection>
             </ProjectContainer>
-            <Footer />
+            <button className='flex cosmic-button bg-black text-(--accent) border border-(--accent) mt-15 mx-auto' onClick={handleClick}>
+                <ArrowUp size={25} />
+                <p className="mx-3">Return to Top of {title}</p>
+            </button>
+            <FooterUpdate />
         </Fragment>
     );
 };

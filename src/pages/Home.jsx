@@ -63,7 +63,6 @@ export const Home = () => {
           id="intro"
           sectionRef={intro}
           scrollIndicatorHidden={scrollIndicatorHidden}
-          visible={visibleSections.includes(intro.current)}
         />
         <ProjectsUpdate
           id="projects"
@@ -71,9 +70,9 @@ export const Home = () => {
           visible={visibleSections.includes(projects.current)}
         />
         <ProfileUpdate
-          id="profile"
           sectionRef={snapshot}
           visible={visibleSections.includes(snapshot.current)}
+          id="snapshot"
         />
         <SkillsSection
           id="skills"

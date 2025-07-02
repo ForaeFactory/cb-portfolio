@@ -5,9 +5,9 @@ import { tokens } from '../ThemeProvider/theme';
 import { Transition } from '../Transition';
 import { useWindowSize } from '../../hooks/useWindowSize';
 import { useScrollToHash } from '../../hooks/useScrollToHash';
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation, Link, NavLink } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
-import { cssProps, msToNum, numToMs } from '../../lib/utils';
+import { cssProps, media, msToNum, numToMs } from '../../lib/utils';
 import { NavToggle } from './nav-toggle';
 import { navLinks, socialLinks } from './nav-data';
 import config from '../../config.json';
@@ -21,6 +21,7 @@ export const NavUpdate = () => {
   const location = useLocation();
   const windowSize = useWindowSize();
   const headerRef = useRef();
+  const isMobile = windowSize.width <= media.mobile || windowSize.height <= 696;
   const scrollToHash = useScrollToHash();
 
   useEffect(() => {
@@ -109,7 +110,7 @@ export const NavUpdate = () => {
       document.removeEventListener('scroll', handleInversion);
       resetNavTheme();
     };
-  }, [theme, windowSize]);
+  }, [theme, windowSize, location.key]);
 
   // Check if a nav item should be active
   const getCurrent = (url = '') => {
@@ -128,13 +129,13 @@ export const NavUpdate = () => {
     if (hash && location.pathname === '/') {
       setTarget(`#${hash}`);
       event.preventDefault();
-      }
-    };
+    }
+  };
 
-    const handleMobileNavClick = event => {
-      handleNavItemClick(event);
-      if (menuOpen) setMenuOpen(false);
-    };
+  const handleMobileNavClick = event => {
+    handleNavItemClick(event);
+    if (menuOpen) setMenuOpen(false);
+  };
 
   return (
     <header className="navbar" ref={headerRef}>
@@ -151,11 +152,19 @@ export const NavUpdate = () => {
       <NavToggle onClick={() => setMenuOpen(!menuOpen)} menuOpen={menuOpen} />
       <nav className="nav">
         <div className="navList">
-          {navLinks.map(({ label, pathname }, key) => (
-            <a key={key}
-              className="navLink" href={pathname}>
+          {navLinks.map(({ label, pathname }) => (
+            <NavLink
+              viewTransition
+              prefetch="intent"
+              to={pathname}
+              key={label}
+              data-navbar-item
+              className="navLink"
+              aria-current={getCurrent(pathname)}
+              onClick={handleNavItemClick}
+            >
               {label}
-            </a>
+            </NavLink>
           ))}
         </div>
         <NavbarIcons desktop />
@@ -164,8 +173,8 @@ export const NavUpdate = () => {
         {({ visible, nodeRef }) => (
           <nav className="mobileNav" data-visible={visible} ref={nodeRef}>
             {navLinks.map(({ label, pathname }, index) => (
-              <Link
-                unstable_viewtransition='true'
+              <NavLink
+                viewTransition
                 prefetch="intent"
                 to={pathname}
                 key={label}
@@ -179,9 +188,9 @@ export const NavUpdate = () => {
                   ),
                 })}>
                 {label}
-              </Link>
+              </NavLink>
             ))}
-            <NavbarIcons desktop />
+            <NavbarIcons />
           </nav>
         )}
       </Transition>
@@ -200,7 +209,7 @@ const NavbarIcons = ({ desktop }) => (
         className="navIconLink"
         aria-label={label}
         href={url}
-        target="http://www.linkedin.com/in/craigbrooks"
+        target="_blank"
         rel="noopener noreferrer"
       >
         <Icon className="navIcon" icon={icon} />

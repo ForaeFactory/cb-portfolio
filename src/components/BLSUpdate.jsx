@@ -41,6 +41,7 @@ import {
 import { Fragment } from 'react';
 import { media, baseMeta } from '../lib/utils.js';
 import { ImageCarousel } from './ImageCarousel.jsx';
+
 // import { ThemeToggle } from "./ThemeToggle.jsx";
 
 
@@ -73,6 +74,12 @@ export const meta = () => {
 
 
 export const BLSUpdate = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location.pathname]);
+
     return (
         <Fragment>
             {/* <ThemeToggle /> */}

@@ -7,7 +7,7 @@ export const navLinks = [
   },
   {
     label: 'Snapshot',
-    pathname: '/#profile',
+    pathname: '/#snapshot',
   },
   // {
   //   label: 'Toolbox',

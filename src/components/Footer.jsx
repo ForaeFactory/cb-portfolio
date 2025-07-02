@@ -1,4 +1,4 @@
-import { ArrowUp } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -9,10 +9,12 @@ export const Footer = () => {
         &copy; {new Date().getFullYear()} ForaeFactory.com All rights reserved.
       </p>
       <a
-        href="#hero"
+        href="/#projects"
         className="flex p-2 rounded-full items-center bg-primary/10 hover:bg-primary/20 text-primary transition-colors"
-      > <p className="mx-3">Return to Projects</p>
-        <ArrowUp size={25} />
+      >
+        <ArrowLeft size={25} />
+        <p className="mx-3">Return to Projects</p>
+
       </a>
     </footer>
   );
