@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-
+import { ArrowUp } from 'lucide-react';
 // Background Images
 import khBackgroundLarge from '../assets/khBackLarge.png';
 import khMain from '../assets/khMainImage.png';
@@ -39,11 +39,14 @@ import {
     ProjectTextRow,
     ProjectImageSection,
 } from './Project-Layout.jsx';
-import { Fragment, useState } from 'react';
+import { Fragment, useState, useEffect } from 'react';
 import { media, baseMeta } from '../lib/utils.js';
 import { ImageCarousel } from './ImageCarousel.jsx';
 import { ThemeToggle } from "./ThemeToggle.jsx";
 import Switcher from './Switcher.jsx';
+import { useLocation } from 'react-router-dom';
+import { FooterUpdate } from './FooterUpdate.jsx';
+import { SegmentedControl, SegmentedControlOption } from './segmented-control.jsx';
 
 
 const images = [
@@ -68,20 +71,44 @@ export const KHUpdate = () => {
     const [theme, setTheme] = useState();
     const [isChecked, setIsChecked] = useState(true)
     const [isDark, setIsDark] = useState(true);
+    const location = useLocation();
+    const themes = ['dark', 'light'];
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location.pathname]);
+
+    const handleClick = () => {
+        window.scrollTo(0, 0);
+    };
+
 
     const themeSwitch = () => {
         if (isDark) {
             setIsChecked(isChecked)
-            document.documentElement.classList.remove("dark");
+            document.documentElement.classList.add("light");
             localStorage.setItem("theme", "light");
             setIsDark(false);
 
         } else {
-            document.documentElement.classList.add("dark");
+            document.documentElement.classList.remove("light");
             localStorage.setItem("theme", "dark");
             setIsDark(true);
         }
     }
+
+    const toggleTheme = () => {
+        if (isDarkMode) {
+            document.documentElement.classList.add("light");
+            localStorage.setItem("theme", "light");
+            setIsDarkMode(false);
+        } else {
+            document.documentElement.classList.remove("light");
+            localStorage.setItem("theme", "dark");
+            setIsDarkMode(true);
+        }
+    };
+
 
     const handleThemeChange = () => {
         themeSwitch();
@@ -176,7 +203,7 @@ export const KHUpdate = () => {
                     </ProjectSectionColumns>
                 </ProjectSection>
 
-                <ProjectSection dark={!isDark}>
+                <ProjectSection dark={isDark}>
                     <Image
                         key={theme}
                         className="mr-0"
@@ -216,7 +243,11 @@ export const KHUpdate = () => {
                     />
                 </ProjectImageSection>
             </ProjectContainer>
-            <Footer />
+            <button className='flex cosmic-button bg-black text-(--accent) border border-(--accent) mt-15 mx-auto' onClick={handleClick}>
+                <ArrowUp size={25} />
+                <p className="mx-3">Return to Top of {title}</p>
+            </button>
+            <FooterUpdate />
         </Fragment>
     );
 };

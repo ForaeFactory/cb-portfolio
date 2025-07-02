@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-
+import { ArrowUp } from 'lucide-react';
 // Background Images
 import mulBackground from '../assets/mulBackground.png';
 
@@ -45,10 +45,11 @@ import {
     ProjectTextRow,
     ProjectImageSection,
 } from './Project-Layout.jsx';
-import { Fragment } from 'react';
+import { Fragment, useEffect } from 'react';
 import { media, baseMeta } from '../lib/utils';
 import { ImageCarousel } from './ImageCarousel.jsx';
 import { FooterUpdate } from './FooterUpdate.jsx';
+import { useLocation } from 'react-router-dom';
 
 
 const expCarousel = [
@@ -80,6 +81,16 @@ export const meta = () => {
 };
 
 export const UltraUpdate = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location.pathname]);
+
+    const handleClick = () => {
+        window.scrollTo(0, 0);
+    };
+
 
     return (
         <Fragment>
@@ -230,6 +241,10 @@ export const UltraUpdate = () => {
                     />
                 </ProjectImageSection>
             </ProjectContainer>
+            <button className='flex cosmic-button bg-black text-(--accent) border border-(--accent) mt-15 mx-auto' onClick={handleClick}>
+                <ArrowUp size={25} />
+                <p className="mx-3">Return to Top of {title}</p>
+            </button>
             <FooterUpdate />
         </Fragment>
     );

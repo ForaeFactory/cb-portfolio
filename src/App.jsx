@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, HydratedRouter, Route, Routes, Scripts, ScrollRestoration } from "react-router-dom";
 // import { useState, useContext, createContext } from 'react';
 import { Home } from "./pages/Home";
 import { NotFound } from "./pages/NotFound";
@@ -28,8 +28,10 @@ function App() {
     <>
       <Toaster />
       <BrowserRouter>
+
         <NavUpdate />
         <ThemeToggle />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/#projects" element={<ProjectsUpdate />} />

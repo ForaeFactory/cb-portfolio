@@ -10,7 +10,6 @@ const ArrowLeft = () => {
     );
 }
 
-
 const ArrowRight = () => {
     return (
         <svg fill="currentColor" width="18" height="35" viewBox="0 0 18 42">
@@ -18,7 +17,6 @@ const ArrowRight = () => {
         </svg>
     );
 }
-
 
 const slideVariants = {
     hiddenRight: {
@@ -44,8 +42,6 @@ const slideVariants = {
         },
     },
 };
-
-
 
 export const ImageCarousel = ({ images }) => {
 
@@ -104,11 +100,10 @@ export const ImageCarousel = ({ images }) => {
                 </button>
             </div>
             <div className="carouselNav flex flex-row mx-auto justify-center" >
-
                 {images.map((image, index) => (
                     <button
                         className="carouselNavButton"
-                        key={image.alt}
+                        key={image.key}
                         onClick={() => navClick(index)}
                         aria-label={`Jump to slide ${index + 1}`}
                         aria-pressed={index === currentIndex}

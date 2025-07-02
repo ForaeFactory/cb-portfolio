@@ -140,6 +140,7 @@ export const NavUpdate = () => {
   return (
     <header className="navbar" ref={headerRef}>
       <Link
+        unstable_viewtransition="true"
         prefetch="intent"
         to={location.pathname === '/' ? '/#intro' : '/'}
         data-navbar-item
@@ -154,7 +155,7 @@ export const NavUpdate = () => {
         <div className="navList">
           {navLinks.map(({ label, pathname }) => (
             <NavLink
-              viewTransition
+              unstable_viewtransition="true"
               prefetch="intent"
               to={pathname}
               key={label}
@@ -174,7 +175,7 @@ export const NavUpdate = () => {
           <nav className="mobileNav" data-visible={visible} ref={nodeRef}>
             {navLinks.map(({ label, pathname }, index) => (
               <NavLink
-                viewTransition
+                unstable_viewtransition="true"
                 prefetch="intent"
                 to={pathname}
                 key={label}

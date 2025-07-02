@@ -1,4 +1,4 @@
-import { Footer } from "./Footer.jsx";
+import { ArrowUp } from 'lucide-react';
 // Background Images
 import blsBackgroundLarge from '../assets/blseltzer/BLS_Photos-Fill.png';
 import blsBackgroundPlaceholder from '../assets/blseltzer/BLS_Photos-Fill.png';
@@ -38,10 +38,11 @@ import {
     ProjectTextRow,
     ProjectImageSection,
 } from './Project-Layout.jsx';
-import { Fragment } from 'react';
+import { Fragment, useEffect } from 'react';
 import { media, baseMeta } from '../lib/utils.js';
 import { ImageCarousel } from './ImageCarousel.jsx';
-
+import { useLocation } from "react-router-dom";
+import { FooterUpdate } from "./FooterUpdate.jsx";
 // import { ThemeToggle } from "./ThemeToggle.jsx";
 
 
@@ -79,6 +80,10 @@ export const BLSUpdate = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [location.pathname]);
+
+    const handleClick = () => {
+        window.scrollTo(0, 0);
+    };
 
     return (
         <Fragment>
@@ -185,7 +190,11 @@ export const BLSUpdate = () => {
                     />
                 </ProjectImageSection>
             </ProjectContainer>
-            <Footer />
+            <button className='flex cosmic-button bg-black text-(--accent) border border-(--accent) mt-15 mx-auto' onClick={handleClick}>
+                <ArrowUp size={25} />
+                <p className="mx-3">Return to Top of {title}</p>
+            </button>
+            <FooterUpdate />
         </Fragment>
     );
 };

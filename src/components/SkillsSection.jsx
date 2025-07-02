@@ -60,7 +60,6 @@ export const SkillsSection = ({ id, visible, sectionRef }) => {
       as="section"
       id={id}
       ref={sectionRef}
-      visible={visible}
       aria-labelledby={titleId}
       tabIndex={-1}>
       <div className="container mx-auto max-w-5xl">
