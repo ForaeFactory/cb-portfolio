@@ -19,6 +19,7 @@ import { ContactUpdate } from "./components/ContactUpdate";
 // import { NavUpdate } from "./components/Nav/NavUpdate";
 import { ThemeToggle } from "./components/ThemeToggle";
 import { NavUpdate } from "./components/Nav/NavUpdate";
+import { Queue } from "./components/Queue";
 // import { ThemeToggleUpdate } from "./components/ThemeToggleUpdate";
 
 
@@ -41,7 +42,7 @@ function App() {
           <Route path="/projects/kh-digital" element={<KHUpdate />} />
           <Route path="/projects/bls-flavor" element={<BLSUpdate />} />
           <Route path="/projects/bud-king" element={<BUDUpdate />} />
-          {/* <Route path="/projects/testing" element={<Showcase />} /> */}
+          <Route path="/projects/testing" element={<Queue />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

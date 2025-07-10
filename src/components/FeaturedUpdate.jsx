@@ -2,6 +2,7 @@
 import { useLocation } from 'react-router-dom';
 import { Button } from '../components/Button';
 import { Image } from '../components/image';
+import { NavUpdate } from './Nav/NavUpdate.jsx';
 import {
     ProjectContainer,
     ProjectSection,
@@ -18,18 +19,20 @@ import budBack from '../assets/budHeroBack_lg.png';
 import ultraBack from '../assets/ultraHeroBack_lg.png';
 import blsBack from '../assets/blsHeroBack_lg.png';
 import khBack from '../assets/khHeroBack_lg.png';
+import qBack from '../assets/queue/Back_q.png';
 
 // Placeholder Imports
 import budImg from '../assets/bud/bud_king.png';
 import ultraImg from '../assets/mulBackground.png';
 import blsImg from '../assets/blsPlace.png';
 import khImg from '../assets/khBackground.png';
+import qHeader from '../assets/queue/Intro_q.png';
 
 // Video Imports
 import budVid from '../assets/bud/BeAKing-Teaser.mp4';
 import khVid from '../assets/khc/KHDR_Exp.mp4';
-import { ThemeToggle } from './ThemeToggle.jsx';
-import { NavUpdate } from './Nav/NavUpdate.jsx';
+
+import qVideo from '../assets/queue/Q_V2.mp4';
 
 const linkLabel = 'View Project';
 
@@ -45,6 +48,17 @@ export const ProjectsUpdate = ({ id, sectionRef, ...rest }) => {
     const location = useLocation();
 
     const projects = [
+        {
+            key: 'queue',
+            title: 'Build the Vibe',
+            vid: qVideo,
+            placeholder: qHeader,
+            imgBack: qBack,
+            url: '/queue',
+            projDesc: "Design an intuitive app that allows people in the same physical or virtual space to join a shared music queue, add tracks via their preferred streaming services, and vote on what plays next—making the listening experience social, fair, and dynamic.",
+            imgDesc: 'Lively crowd partying to their favorite playlists',
+            vidDesc: 'Animation of Queue interactions and UI.'
+        },
         {
             key: 'ultra',
             title: 'Look of the Leader',
