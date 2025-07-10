@@ -15,7 +15,7 @@ import qResearch4 from '../assets/queue/Sketches_q.png';
 //Wireframes
 import qWire1 from '../assets/queue/LofiWire_q.png';
 // import qWire2 from '../assets/queue/HiFiWire_q.png';
-import qWire3 from '../assets/queue/HiFiRoutes_q.png';
+import qWire3 from '../assets/queue/HifiRoutes_q.png';
 
 // Culture Image Set
 import qDesign1 from '../assets/queue/Logos_q.png';
