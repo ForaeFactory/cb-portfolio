@@ -42,7 +42,8 @@ function App() {
           <Route path="/projects/kh-digital" element={<KHUpdate />} />
           <Route path="/projects/bls-flavor" element={<BLSUpdate />} />
           <Route path="/projects/bud-king" element={<BUDUpdate />} />
-          <Route path="/projects/testing" element={<Queue />} />
+          <Route path="/projects/queue" element={<Queue />} />
+          {/* <Route path="/projects/testing" element={<Queue />} /> */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
