@@ -31,14 +31,13 @@ import qHeader from '../assets/queue/Intro_q.png';
 // Video Imports
 import budVid from '../assets/bud/BeAKing-Teaser.mp4';
 import khVid from '../assets/khc/KHDR_Exp.mp4';
-
 import qVideo from '../assets/queue/Q_V2.mp4';
 
 const linkLabel = 'View Project';
 
 const heading = 'Featured Projects';
 const description =
-    'Four featured projects including: Bud Light Seltzer, Kraft Heinz, Michelob Ultra and Budweiser.';
+    'Five featured projects including: Queue Mobile App, Bud Light Seltzer, Kraft Heinz, Michelob Ultra and Budweiser.';
 
 export const meta = () => {
     return baseMeta({ heading, description, prefix: 'Projects' });

@@ -6,6 +6,7 @@ import budBack from '../assets/budBack_update.png';
 import ultraBack from '../assets/ultraBack_update.png';
 import blsBack from '../assets/blsBack_update.png';
 import khBack from '../assets/khBack_update.png';
+import qBack from '../assets/qBackLarge.png';
 
 // Placeholder Imports
 import budImg from '../assets/bud/bud_king.png';
@@ -16,6 +17,7 @@ import khImg from '../assets/khBackground.png';
 // Video Imports
 import budVid from '../assets/bud/BeAKing-Teaser.mp4';
 import khVid from '../assets/khc/KHDR_Exp.mp4';
+import qVid from '../assets/queue/Q_V2.mp4';
 import { ProjectsUpdate } from './FeaturedUpdate';
 
 // const sections = [
@@ -26,6 +28,17 @@ import { ProjectsUpdate } from './FeaturedUpdate';
 // ]
 
 const projects = [
+    {
+        key: 'queue',
+        title: 'Build the Vibe',
+        vid: qVid,
+        placeholder: qBack,
+        imgBack: qBack,
+        url: '/queue',
+        projDesc: "Design an intuitive app that allows people in the same physical or virtual space to join a shared music queue, add tracks via their preferred streaming services, and vote on what plays next—making the listening experience social, fair, and dynamic.",
+        imgDesc: 'High fidelity wireframes leveraging the new design system.',
+        vidDesc: 'High fidelity wireframes leveraging the new design system.'
+    },
     {
         key: 'ultra',
         title: 'Look of the Leader',

@@ -6,7 +6,7 @@ import { NavUpdate } from '../components/Nav/NavUpdate';
 import { ProfileUpdate } from '../components/AboutUpdate';
 import { FooterUpdate } from '../components/FooterUpdate';
 
-import { ProjectsUpdate } from '../components/FeaturedUpdate';
+import { StickySection } from '../components/StickyProject';
 
 
 export const Home = () => {
@@ -64,7 +64,7 @@ export const Home = () => {
           sectionRef={intro}
           scrollIndicatorHidden={scrollIndicatorHidden}
         />
-        <ProjectsUpdate
+        <StickySection
           id="projects"
           sectionRef={projects}
           visible={visibleSections.includes(projects.current)}
