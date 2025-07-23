@@ -5,6 +5,7 @@ import qBack from '../assets/queue/Back_q.png';
 
 // Header Image Set
 import qHeader from '../assets/queue/Intro_q.png';
+import qHeader2 from '../assets/queue/qIntro.png';
 
 // Concept Image Set
 import qResearch1 from '../assets/queue/Data_q.png';
@@ -27,7 +28,7 @@ import qDesign6 from '../assets/queue/HeadFoot_q.png';
 import qDesign7 from '../assets/queue/ui_q.png';
 
 // Video Content
-import qVideo from '../assets/queue/Q_V2.mp4';
+import qVideo from '../assets/queue/Q-V2_Opt.mp4';
 
 // Filler Content
 // import budFill1 from '../assets/bud/BudFill1.png';
@@ -112,7 +113,7 @@ export const Queue = () => {
                 <ProjectSection>
                     <ProjectSectionContent>
                         <ProjectImage
-                            srcSet={`${qHeader} 800w, ${qHeader} 1920w`}
+                            srcSet={`${qHeader2} 800w, ${qHeader2} 1920w`}
                             width={800}
                             height={500}
                             placeholder={qHeader}
@@ -184,8 +185,8 @@ export const Queue = () => {
                 <ProjectImageSection padding="top">
                     <Image
                         className="imageBackground"
-                        src={qHeader}
-                        placeholder={qHeader}
+                        src={qHeader2}
+                        placeholder={qHeader2}
                         alt="Budweiser bottle on vivid red background."
                     />
                 </ProjectImageSection>

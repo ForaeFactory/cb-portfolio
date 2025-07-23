@@ -15,6 +15,7 @@ import { ThemeToggle } from "./components/ThemeToggle";
 import { NavUpdate } from "./components/Nav/NavUpdate";
 import { Queue } from "./components/Queue";
 import { StickySection } from "./components/StickyProject";
+import { Bewell } from "./components/BeWell";
 
 
 
@@ -26,7 +27,7 @@ function App() {
       <BrowserRouter>
 
         <NavUpdate />
-        <ThemeToggle />
+        {/* <ThemeToggle /> */}
 
         <Routes>
           <Route path="/" element={<Home />} />
@@ -37,6 +38,7 @@ function App() {
           <Route path="/projects/bls-flavor" element={<BLSUpdate />} />
           <Route path="/projects/bud-king" element={<BUDUpdate />} />
           <Route path="/projects/queue" element={<Queue />} />
+          <Route path="/projects/bewell" element={<Bewell />} />
           <Route path="/testing" element={<StickySection />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

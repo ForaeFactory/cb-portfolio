@@ -20,17 +20,19 @@ import ultraBack from '../assets/ultraHeroBack_lg.png';
 import blsBack from '../assets/blsHeroBack_lg.png';
 import khBack from '../assets/khHeroBack_lg.png';
 import qBack from '../assets/qBackLarge.png';
+import bewellBack from '../assets/bewell/bw-12_brand.png';
 
 // Placeholder Imports
 import budImg from '../assets/bud/bud_king.png';
 import ultraImg from '../assets/mulBackground.png';
 import blsImg from '../assets/blsPlace.png';
 import khImg from '../assets/khBackground.png';
+import bewellHeader from '../assets/bewell/bw-1_brand.png';
 
 // Video Imports
 import budVid from '../assets/bud/BeAKing-Teaser.mp4';
 import khVid from '../assets/khc/KHDR_Exp.mp4';
-import qVideo from '../assets/queue/Q_V2.mp4';
+import qVideo from '../assets/queue/Q-V2_Opt.mp4';
 
 const linkLabel = 'View Project';
 
@@ -60,7 +62,7 @@ const projects = [
         vid: '',
         placeholder: ultraImg,
         imgBack: ultraBack,
-        url: '/ultra',
+        url: '/ultra-leader',
         projDesc: "As the national strategy was being finalized, ULTRA noticed opportunities to address issues involving their visuals and trade at a regional level that could unleash true potential of the brand.",
         imgDesc: 'Fit experts on stage as panelists at Michelob Ultra FitFest',
         vidDesc: 'Diverse group of young women in Michelob Ultra fitness apparel, sittin on a couch laughing and smiling.'
@@ -94,6 +96,17 @@ const projects = [
         placeholder: budImg,
         imgBack: budBack,
         url: '/bud-king',
+        projDesc: "Despite global success and widespread recognition, Budweiser had seen declining multicultural brand relevance and regional sales from its past leader Houston, TX. The brand's heritage messaging and national campaigns weren’t resonating locally.",
+        imgDesc: 'Large billboard on the side of a building with Budweiser "Be A King" imagery',
+        vidDesc: 'Houston Rapper Slim Thug performing at a local Budweiser event'
+    },
+    {
+        key: 'bewell',
+        title: 'Bewell Brand Refresh',
+        vid: bewellHeader,
+        placeholder: bewellHeader,
+        imgBack: bewellBack,
+        url: '/bewell',
         projDesc: "Despite global success and widespread recognition, Budweiser had seen declining multicultural brand relevance and regional sales from its past leader Houston, TX. The brand's heritage messaging and national campaigns weren’t resonating locally.",
         imgDesc: 'Large billboard on the side of a building with Budweiser "Be A King" imagery',
         vidDesc: 'Houston Rapper Slim Thug performing at a local Budweiser event'
