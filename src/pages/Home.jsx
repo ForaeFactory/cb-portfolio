@@ -5,9 +5,8 @@ import { HeroUpdate } from "../components/HeroUpdate";
 import { NavUpdate } from '../components/Nav/NavUpdate';
 import { ProfileUpdate } from '../components/AboutUpdate';
 import { FooterUpdate } from '../components/FooterUpdate';
-
 import { StickySection } from '../components/StickyProject';
-
+// import { Showcase } from '../components/Showcase';
 
 export const Home = () => {
   const [visibleSections, setVisibleSections] = useState([]);
@@ -18,7 +17,7 @@ export const Home = () => {
   const snapshot = useRef();
 
   useEffect(() => {
-    const sections = [intro, projects, skills, snapshot];
+    const sections = [intro, projects, snapshot, skills];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -42,7 +41,10 @@ export const Home = () => {
     );
 
     sections.forEach(section => {
-      sectionObserver.observe(section.current);
+      // sectionObserver.observe(section.current);
+      if (section.current && section.current instanceof Element) {
+        sectionObserver.observe(section.current);
+      }
     });
 
     if (intro.current && intro.current instanceof Element) {
@@ -64,6 +66,11 @@ export const Home = () => {
           sectionRef={intro}
           scrollIndicatorHidden={scrollIndicatorHidden}
         />
+        {/* <Showcase
+          id="projects"
+          sectionRef={projects}
+          visible={visibleSections.includes(projects.current)}
+        /> */}
         <StickySection
           id="projects"
           sectionRef={projects}

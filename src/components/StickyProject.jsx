@@ -20,7 +20,7 @@ import ultraBack from '../assets/ultraHeroBack_lg.png';
 import blsBack from '../assets/blsHeroBack_lg.png';
 import khBack from '../assets/khHeroBack_lg.png';
 import qBack from '../assets/qBackLarge.png';
-import bewellBack from '../assets/bewell/bw-12_brand.png';
+import bewellBack from '../assets/bwBackNew.png';
 
 // Placeholder Imports
 import budImg from '../assets/bud/bud_king.png';
@@ -107,9 +107,9 @@ const projects = [
         placeholder: bewellHeader,
         imgBack: bewellBack,
         url: '/bewell',
-        projDesc: "Despite global success and widespread recognition, Budweiser had seen declining multicultural brand relevance and regional sales from its past leader Houston, TX. The brand's heritage messaging and national campaigns weren’t resonating locally.",
-        imgDesc: 'Large billboard on the side of a building with Budweiser "Be A King" imagery',
-        vidDesc: 'Houston Rapper Slim Thug performing at a local Budweiser event'
+        projDesc: "What started as a logo redesign, evolved into building the brand's base visual identity to better reflect the current vision.",
+        imgDesc: 'Bewell brand logo on the background of a lotus flower',
+        vidDesc: 'None'
     }
 ]
 

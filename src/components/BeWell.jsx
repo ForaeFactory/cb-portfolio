@@ -119,12 +119,10 @@ export const Bewell = () => {
                     <ProjectTextRow className="mt-20px mx-0 mb-60px">
                         <ProjectSectionHeading>Introduction</ProjectSectionHeading>
                         <ProjectSectionText>
-                            To fortify ULTRA's position as the 'Look of the Leader,' our execution centers
-                            on a clean brand re-envisioning across all lifestyle and trade touchpoints.
-                            This demands optimizing and simplifying the product story to ensure maximum impact
-                            and crystal-clear messaging. A key pillar of our approach will be to articulate
-                            the direct benefits to the consumer, this will be achieved through direct, easy-to-understand language and an intentional use of whitespace that
-                            maintains the brand's established premium visual identity and tone."
+                            The aim is to evolve its visual identity and messaging to better reflect its current values and market position.
+                            This initiative will strategically refine Bewell's core assets, including its logo, color palette, and
+                            brand voice, to create a more modern, cohesive, and compelling brand presence that resonates with its target
+                            audience and supports future growth.
                         </ProjectSectionText>
                     </ProjectTextRow>
                     {expCarousel.map(img => (

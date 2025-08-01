@@ -37,7 +37,7 @@ const skills = [
 const categories = ["all", "vision", "execution", "leadership", "tools"];
 
 export const SkillsSection = ({ id, visible, sectionRef }) => {
-  const [activeCategory, setActiveCategory] = useState("vision");
+  const [activeCategory, setActiveCategory] = useState("all");
   const [animateKey, setAnimateKey] = useState(0);
   const [focused, setFocused] = useState(false);
   const titleId = `${id}-title`;
@@ -63,13 +63,13 @@ export const SkillsSection = ({ id, visible, sectionRef }) => {
       aria-labelledby={titleId}
       tabIndex={-1}>
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+        <h2 className="text-3xl md:text-4xl font-regular tracking-wide mb-10 text-center">
           Toolbox
         </h2>
         <hr
           className="my-10 h-px border-t-0 bg-transparent bg-linear-to-r from-white/0 via-white/30 to-transparent" />
 
-        <div className="flex flex-wrap justify-center gap-4 my-12">
+        <div className="flex flex-wrap justify-center gap-6 my-10">
           {categories.map((category, key) => (
             <button
               key={key}
@@ -93,7 +93,7 @@ export const SkillsSection = ({ id, visible, sectionRef }) => {
               className="bg-(--card)/30 p-6 rounded-md shadow-md card-hover"
             >
               <div className="text-left mb-4">
-                <h3 className="font-semibold text-md"> {skill.name}</h3>
+                <h3 className="font-regular text-md"> {skill.name}</h3>
               </div>
               <div className="w-full bg-(--accent)/20 h-2 rounded-full overflow-hidden">
                 <div key={animateKey}
